@@ -41,9 +41,10 @@ public class Person {
     }
 
     public int getWeight() {
-        return this.weight;
+        
+    	return this.weight;
     }
-
+  //©KS
     public void setWeight(int weight) {
         this.weight = weight;
     }

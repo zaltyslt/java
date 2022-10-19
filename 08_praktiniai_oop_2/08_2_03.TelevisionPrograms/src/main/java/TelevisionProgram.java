@@ -3,7 +3,7 @@ public class TelevisionProgram {
 
     private String name;
     private int duration;
-
+  //©KS
     public TelevisionProgram(String name, int duration) {
         this.name = name;
         this.duration = duration;

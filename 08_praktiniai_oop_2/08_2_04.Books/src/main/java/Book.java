@@ -5,7 +5,7 @@ public class Book {
 	private int numOfPages;
 	private int publicatonYear;
 
-	
+	//©KS
 	public Book(String title, int numOfPages, int publicatonYear) {
 		this.title = title;
 		this.numOfPages = numOfPages;

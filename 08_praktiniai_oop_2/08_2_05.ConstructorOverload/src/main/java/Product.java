@@ -10,7 +10,7 @@ public class Product {
         this.location = location;
         this.weight = weight;
     }
-    
+    //©KS
     public Product(String name ) {
        this(name, "shelf", 1);
     }
