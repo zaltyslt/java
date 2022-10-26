@@ -8,12 +8,15 @@ public class Main {
         SimpleCollection c = new SimpleCollection("characters");
 //        System.out.println("Pisin: " + c.longest());
         
-        c.add("magneto");
-        c.add("mystique");
-        c.add("phoenix");
+        c.add("one");
+        c.add("two");
+        c.add("three");
+//        c.add("magneto");
+//        c.add("mystique");
+//        c.add("phoenix");
         
-//        System.out.println("Longest: " + c.longest());
+       System.out.println("Longest: " + c.longest());
 
-        
+        System.out.println(c.longest());
     }
 }
