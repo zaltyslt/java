@@ -1,18 +1,21 @@
-import java.util.ArrayList;
+
 
 public class Saskaita {
 
-	private final AccountNo accountNo;
-	private final String fName;
-	private final String lName;
-	private int balance;
+	private final int accountNo;
+	private String fName;
+	private String lName;
+	protected int balance;
 
 	public Saskaita(String name, String lastName) {
 
-		this.accountNo = new AccountNo();
+		
+		this.accountNo = SaskRegistras.getNumForAcc();
 		this.fName = name;
 		this.lName = lastName;
 		balance = 0;
+		
+		
 	}
 
 	/**
@@ -32,16 +35,14 @@ public class Saskaita {
 	/**
 	 * @return the accountNo
 	 */
-	public AccountNo getAccountNo() {
+	public int getAccountNo() {
 		return accountNo;
 	}
 
 	public int getBalance() {
 		return this.balance;
 	}
-	
-	
-	
+		
 	public boolean addMoney(int amount) {
 		if (amount > 0 && amount <= 100_000 && amount + this.balance <= Integer.MAX_VALUE) {
 			balance += amount;
@@ -60,9 +61,11 @@ public class Saskaita {
 
 	@Override
 	public String toString() {
-		return "Saskaita " +accountNo.toString();
+		return "Saskaita " + this.accountNo;
 		
 	}
+	
+	
 	
 	
 }

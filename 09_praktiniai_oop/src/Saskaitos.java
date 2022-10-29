@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Saskaitos {
- static ArrayList<Integer> sasList;
+ private static ArrayList<Integer> sasList;
  
  public Saskaitos() {
 	 sasList = new ArrayList<>();

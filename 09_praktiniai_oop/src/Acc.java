@@ -1,17 +1,9 @@
 
 public class Acc {
-private int accNo = 0;
+	
+	public static int makeAccNo() {
 
-public Acc() {
-	do  {
-		accNo = (int) ((Math.random() * (10 - 0)) + 0);
+		return (int) ((Math.random() * (200 - 100)) + 100);
+
 	}
-	while(!Saskaitos.canCreate(accNo));
-		
-	}
-public int getAccNo() {
-	return accNo;
 }
-
-}
-
