@@ -61,7 +61,9 @@ public class Saskaita {
 
 	@Override
 	public String toString() {
-		return "Saskaita " + this.accountNo;
+		return "Saskaita " + this.accountNo + "\n"+
+	"Vartotojas "+ getfName()+" "+getlName() + "\n"+
+	"Balansas "+ getBalance();			
 		
 	}
 	

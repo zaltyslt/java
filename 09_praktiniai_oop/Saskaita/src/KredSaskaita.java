@@ -12,6 +12,7 @@ public class KredSaskaita extends Saskaita {
 	@Override
 	public boolean addMoney(int amount) {
 		if (amount > 0 && amount <= 100_000 && amount + this.balance <= Integer.MAX_VALUE) {
+			balance += amount;
 			if (balance + amount > 0) {
 				balance = 0;
 			}
@@ -22,10 +23,11 @@ public class KredSaskaita extends Saskaita {
 	
 	@Override
 	public boolean takeMoney(int amount) {
-		if (amount > 0 && amount <= 100_000 && this.balance - amount <= maxCredit) {
+		if (amount > 0 && amount <= 100_000 && ( balance - amount) > maxCredit) {
 			balance -= amount;
 			return true;
 		}
 		return false;
 	}
+	
 }
