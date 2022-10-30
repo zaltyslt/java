@@ -5,7 +5,7 @@ import garazas.masinos.varikliai.Dyzeliukas;
 import garazas.masinos.varikliai.Elektra;
 import garazas.masinos.varikliai.InterfaceVariklis;
 
-public class Main {
+public class Main {//©KS
 
 	public static void main(String[] args) {
 		// sukuriamas variklio objektas

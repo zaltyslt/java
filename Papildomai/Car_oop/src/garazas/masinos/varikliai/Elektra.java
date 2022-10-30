@@ -1,6 +1,6 @@
 package garazas.masinos.varikliai;
 
-public class Elektra implements InterfaceVariklis {
+public class Elektra implements InterfaceVariklis {//©KS
 
 	@Override
 	public void run() {

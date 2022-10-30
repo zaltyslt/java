@@ -1,6 +1,6 @@
 package garazas.masinos.siurblys;
 
-public class KuroSiurblys implements InterfaceSiurblys {
+public class KuroSiurblys implements InterfaceSiurblys {//©KS
 
 	@Override
 	public boolean isReady() {

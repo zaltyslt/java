@@ -1,7 +1,7 @@
 
 public class Acc {
 	
-	public static int makeAccNo() {
+	public static int makeAccNo() {//©KS
 
 		return (int) ((Math.random() * (200 - 100)) + 100);
 

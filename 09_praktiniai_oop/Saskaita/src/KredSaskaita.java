@@ -1,5 +1,5 @@
 
-public class KredSaskaita extends Saskaita {
+public class KredSaskaita extends Saskaita {//©KS
 
 	private int maxCredit;
 

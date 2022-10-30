@@ -1,20 +1,23 @@
-import java.sql.Date;
+import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-public class Account {
+public class Account {//©KS
 	private int id;
 	private double balance;
 	private double annualInterestRate;
-	private Date dateCreated;
-	
+	private LocalDate dateCreated;
+
 	public Account() throws ParseException {
 		this.id = 0;
 		this.balance = 0.0;
-		this.annualInterestRate = 0.0;
-		this.dateCreated = (Date) new SimpleDateFormat("yyyy.MM.dd").parse("2022.01.25");
+		this.annualInterestRate = 6.0;
+		// SimpleDateFormat formatter = new SimpleDateFormat("yyyy.mm.dd - HH:mm:ss");
+		this.dateCreated = LocalDate.now();
 	}
-	
+
 	public Account(int id, double balance) throws ParseException {
 		this();
 		this.id = id;
@@ -25,7 +28,7 @@ public class Account {
 	 * @return the id
 	 */
 	public int getId() {
-		return id;
+		return this.id;
 	}
 
 	/**
@@ -39,7 +42,7 @@ public class Account {
 	 * @return the balance
 	 */
 	public double getBalance() {
-		return balance;
+		return this.balance;
 	}
 
 	/**
@@ -53,7 +56,7 @@ public class Account {
 	 * @return the annualInterestRate
 	 */
 	public double getAnnualInterestRate() {
-		return annualInterestRate;
+		return this.annualInterestRate;
 	}
 
 	/**
@@ -62,13 +65,32 @@ public class Account {
 	public void setAnnualInterestRate(double annualInterestRate) {
 		this.annualInterestRate = annualInterestRate;
 	}
+
 	/**
 	 * @param annualInterestRate the annualInterestRate to set
 	 */
-	public Date getDateCreated() {
-		return dateCreated;
+	public LocalDate getDateCreated() {
+		return this.dateCreated;
 	}
 
-	
-	
+	public double getMonthlyInterestRate() {
+		return this.annualInterestRate / 12;
+
+	}
+
+	public double getMonthlyInterest() {
+		return this.balance * (this.getMonthlyInterestRate() / 100);
+
+	}
+
+	public void withdraw(Double amount) {
+		this.balance -= amount;
+	}
+	public void deposit(Double amount) {
+		this.balance += amount;
+	}
+@Override
+public String toString() {
+	return this.getDateCreated()+" "+this.getId()+" "+this.getBalance()+" "+this.getAnnualInterestRate();
+}
 }

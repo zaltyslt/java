@@ -3,7 +3,7 @@ import java.util.Iterator;
 
 import garazas.masinos.varikliai.InterfaceVariklis;
 
-public class Car {
+public class Car {//©KS
 
 	// argumentas rodo i klase kuri implementuoja VariklisInterface,
 	// kad butu galima paduoti bet kokia klase, kuri implementuoja VariklisInterface.

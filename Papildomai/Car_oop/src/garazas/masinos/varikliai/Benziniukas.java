@@ -4,7 +4,7 @@ import garazas.masinos.CarsDevices;
 import garazas.masinos.siurblys.InterfaceSiurblys;
 import garazas.masinos.siurblys.KuroSiurblys;
 
-public class Benziniukas extends CarsDevices implements InterfaceVariklis  {
+public class Benziniukas extends CarsDevices implements InterfaceVariklis  {//©KS
 	InterfaceSiurblys siurblys; 
 
 	public Benziniukas() {

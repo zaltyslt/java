@@ -1,6 +1,6 @@
 
 
-public class Saskaita {
+public class Saskaita {//©KS
 
 	private final int accountNo;
 	private String fName;

@@ -1,6 +1,6 @@
 package garazas.masinos.siurblys;
 
-public interface InterfaceSiurblys {
+public interface InterfaceSiurblys {//©KS
 
 	public boolean isReady() ;
 	

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class AccountNo {
+public class AccountNo {//©KS
 	private String prefix;
 	private int seg1, seg2, seg3, seg4, seg5;
     static ArrayList<String> noList = new ArrayList<>();

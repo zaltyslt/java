@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class SaskRegistras {
+public class SaskRegistras {//©KS
 
 	private static ArrayList<Saskaita> saskRegistras;
 

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Saskaitos {
+public class Saskaitos {//©KS
  private static ArrayList<Integer> sasList;
  
  public Saskaitos() {
