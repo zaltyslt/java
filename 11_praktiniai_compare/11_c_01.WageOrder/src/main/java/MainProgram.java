@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class MainProgram {
+public class MainProgram {//©KS
 
     public static void main(String[] args) {
         ArrayList<Human> humans = new ArrayList<>();

@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class MainProgram {
+public class MainProgram {//©KS
 
     public static void main(String[] args) {
         Student first = new Student("jamo");
