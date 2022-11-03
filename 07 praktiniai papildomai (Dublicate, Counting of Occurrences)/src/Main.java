@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {//©KS
 		int maxVal = 105;
 		int[] values = new int[maxVal];
 		for (int i = 0; i < maxVal; i++) {

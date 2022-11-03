@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
-public class Dublicate {
+public class Dublicate {//©KS
 
 	public static int firstDublicate(int[] values) {
 		HashSet<Integer> cheked = new HashSet<>();
