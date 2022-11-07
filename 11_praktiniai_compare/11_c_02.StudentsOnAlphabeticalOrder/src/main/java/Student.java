@@ -1,6 +1,6 @@
 
 
-public class Student implements Comparable<Student>{
+public class Student implements Comparable<Student>{//©KS
 
     private String name;
 
