@@ -1,6 +1,6 @@
 
 
-public class Card {
+public class Card  implements  Comparable<Card>{//©KS
 
     private int value;
     private Suit suit;
@@ -37,5 +37,17 @@ public class Card {
     public Suit getSuit() {
         return suit;
     }
+@Override
+    public int compareTo(Card card) {
+    	if(this.value != card.value){
+    		return this.value - card.value;
+    	}else {
+    		return this.suit.ordinal() - card.suit.ordinal();
+    	}
+//    	club first, diamond 	second, heart third, and spade last.
+		
+	}
 
+	
+    
 }

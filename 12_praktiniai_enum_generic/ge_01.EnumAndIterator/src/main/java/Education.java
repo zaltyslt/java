@@ -1,6 +1,6 @@
 
-public enum Education {
-	PHD("Doctoral degree"), MA ("Masters degree"), BA("Bachelors degree"), HS ("High School diploma");
+public enum Education {//©KS
+	PHD("Doctoral degree"), MA("Masters degree"), BA("Bachelors degree"), HS("High School diploma");
 
 	private String description;
 	
@@ -8,7 +8,10 @@ public enum Education {
 		this.description = string;
 	}
 	
-	String getDescription(String abr) {
+	
+	String getDescription() {
 		return description;
 	}
+	
+	
 }
