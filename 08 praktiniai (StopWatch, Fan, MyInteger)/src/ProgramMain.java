@@ -3,11 +3,11 @@ public class ProgramMain {// ©KS
 
 	public static void main(String[] args) throws InterruptedException {
 
-//		StopWatch stopWatch = new StopWatch();
-//		stopWatch.start();
-//		Thread.sleep(1000);
-//		stopWatch.stop();
-//		System.out.println(stopWatch);
+		StopWatch stopWatch = new StopWatch();
+		stopWatch.start();
+		Thread.sleep(1000);
+		stopWatch.stop();
+		System.out.println(stopWatch);
 
 		/*
 		 * Write a test program that creates two Fan objects. Assign maximum speed,
@@ -17,19 +17,19 @@ public class ProgramMain {// ©KS
 		 * object. Display the objects by invoking their toString method.
 		 */
 
-//		Fan fan1 = new Fan();
-//		Fan fan2 = new Fan();
-//
-//		fan1.setSpeed(fan1.getFAST());
-//		fan1.setRadius(10);
-//		fan1.setOn(true);
-//		
-//		fan2.setSpeed(fan1.getFAST());
-//		fan2.setRadius(10);
-//		fan2.setOn(false);
-//		
-//		System.out.println(fan1);
-//		System.out.println(fan2);
+		Fan fan1 = new Fan();
+		Fan fan2 = new Fan();
+
+		fan1.setSpeed(fan1.getFAST());
+		fan1.setRadius(10);
+		fan1.setOn(true);
+		
+		fan2.setSpeed(fan1.getFAST());
+		fan2.setRadius(10);
+		fan2.setOn(false);
+		
+		System.out.println(fan1);
+		System.out.println(fan2);
 
 		MyInteger myInteger = new MyInteger(19);
 		System.out.println("Value stored in myInteger object: " + myInteger.getValue());
