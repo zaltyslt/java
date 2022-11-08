@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class LastElement {
+public class LastElement {//©KS
 
 	public LastElement() {
 		// TODO Auto-generated constructor stub
