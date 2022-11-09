@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.function.Consumer;
 
-public class Lambdas1 {
+public class Lambdas1 {//©KS
 	/**
 	 * Run the exercises to ensure we got the right answers
 	 */

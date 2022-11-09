@@ -4,7 +4,7 @@ import java.util.function.IntBinaryOperator;
 
 
 
-public class Lambdas2 {
+public class Lambdas2 {//©KS
 
 	
 
@@ -39,15 +39,19 @@ public class Lambdas2 {
 //												 });
 //		System.out.println(Arrays.asList(array));
 		
-		Arrays.sort(array, (s1,s2) -> yourMethod(s1,s2));
-	}
-	
-	
-	static int yourMethod(IntBinaryOperator op1, IntBinaryOperator op2){
-	    //return op.applyAsInt(5, 10);
+		String[] array2 = {"Karla", "Pepas", "Terminator", "Malvina"};
+		Arrays.sort(array2, (s1,s2) -> yourMethod(s1,s2));
+		System.out.println(Arrays.asList(array2));
 		
 	}
-//		public static applyAsInt(T t, U u) {
-//			return null;
-//		}
+	
+	
+	static int yourMethod(String string1, String string2){
+		int value1 = string1.contains("e") ? -1:1;
+		int value2 = string2.contains("e") ? -1:1;
+//		System.out.println(string1+ ": "+ value1 +"; "+ string2+ ": "+ value2 + "= " + (value1 - value2) );
+		return value1 - value2;
+		
+	}
+
 }

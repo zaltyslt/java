@@ -1,6 +1,6 @@
 package lambda;
 
-public class LMain {
+public class LMain {//©KS
 
 	public static void main(String[] args) {
 		Printable lambdaPrintable = (s) -> {return "Meow " +s;};

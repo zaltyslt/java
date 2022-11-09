@@ -1,5 +1,5 @@
 package lambda;
 
-public interface Printable {
+public interface Printable {//©KS
 String print(String suffix);
 }
