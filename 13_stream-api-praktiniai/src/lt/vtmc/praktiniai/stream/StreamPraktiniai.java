@@ -1,6 +1,8 @@
 package lt.vtmc.praktiniai.stream;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
@@ -42,26 +44,35 @@ public class StreamPraktiniai {
     }
 
     public static Integer countUsersOlderThen25(List<User> users){
-    	return users.stream().map(u->{(int)u.getAge() > 25}).count();   }
+   	
+    	return (int) users.stream().filter(u->u.getAge() > 25).count(); 
+    }
 
     public static List<String> mapToUpperCase(List<String> strings){
-        throw new UnsupportedOperationException("Not implemented");
+//        return strings.stream().map(s->s.toUpperCase()).collect(Collectors.toList());
+         	return strings.stream().map(w -> w.split("")).
+         			flatMap(Arrays::stream)
+    	           .distinct()
+    	           .collect(Collectors.toList());
     }
 
     public static Integer sum(List<Integer> integers){
-        throw new UnsupportedOperationException("Not implemented");
+       return integers.stream().reduce(0, Integer::sum);
     }
 
     public static List<Integer> skip(List<Integer> integers, Integer toSkip){
-        throw new UnsupportedOperationException("Not implemented");
+    	return integers.stream().skip(toSkip).toList();
     }
 
     public static List<String> getFirstNames(List<String> names){
-        throw new UnsupportedOperationException("Not implemented");
+        return names.stream().map(s-> s.split(" ")).map(ar -> ar[0]).toList();
     }
 
     public static List<String> getDistinctLetters(List<String> names){
-        throw new UnsupportedOperationException("Not implemented");
+    	StringBuilder strBuiledr = new StringBuilder();
+    
+//    	return names.stream().map(s-> s.split(" ").map(arr -> )
+    	 throw new UnsupportedOperationException("Not implemented");
     }
 
 
