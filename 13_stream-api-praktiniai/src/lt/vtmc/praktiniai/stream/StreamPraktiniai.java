@@ -69,16 +69,16 @@ public class StreamPraktiniai {
     }
 
     public static List<String> getDistinctLetters(List<String> names){
-    	StringBuilder strBuiledr = new StringBuilder();
-    
-//    	return names.stream().map(s-> s.split(" ").map(arr -> )
-    	 throw new UnsupportedOperationException("Not implemented");
+       
+    	return names.stream().map(s-> s.split("")).flatMap(s->Stream.of(s)).distinct().toList();
+    	 
     }
 
 
     public static String separateNamesByComma(List<User> users){
-        throw new UnsupportedOperationException("Not implemented");
+        return users.stream().map(s->{String.join(",", s)} ).
     }
+
 
     public static double getAverageAge(List<User> users){
         throw new UnsupportedOperationException("Not implemented");
