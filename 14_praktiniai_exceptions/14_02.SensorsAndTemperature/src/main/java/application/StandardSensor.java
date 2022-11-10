@@ -2,9 +2,11 @@ package application;
 
 public class StandardSensor implements Sensor{
     private boolean isOn;
+    private int val;
 
-    public StandardSensor(boolean isOn) {
+    public StandardSensor(int val) {
         this.isOn = isOn;
+        this.val = val;
     }
 
     @Override
@@ -24,6 +26,6 @@ public class StandardSensor implements Sensor{
 
     @Override
     public int read() {
-        return 0;
+        return this.val;
     }
 }
