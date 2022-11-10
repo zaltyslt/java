@@ -1,6 +1,11 @@
 package application;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
 
-public class TemperatureSensor implements Sensor{
+
+public class TemperatureSensor implements Sensor{//©KS
     private boolean isOn;
 
     public TemperatureSensor() {
@@ -27,7 +32,13 @@ this.isOn = false;
         if(!isOn) {
          throw  new IllegalStateException();
         }
-       return Random().nextInt(61) - 30;
+
+        return new Random().nextInt(61)-30;
+    }
+
+    @Override
+    public List<Integer> readings() {
+        return null;
     }
 
 }

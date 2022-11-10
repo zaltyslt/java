@@ -1,6 +1,6 @@
 package validating;
 
-public class Person {
+public class Person {//©KS
 
     private String name;
     private int age;

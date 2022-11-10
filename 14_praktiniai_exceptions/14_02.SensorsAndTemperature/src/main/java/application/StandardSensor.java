@@ -1,22 +1,25 @@
 package application;
 
-public class StandardSensor implements Sensor{
-    private boolean isOn;
-    private int val;
+import java.util.LinkedList;
+import java.util.List;
+
+public class StandardSensor implements Sensor {//©KS
+    //private int isOn;
+    private int value;
 
     public StandardSensor(int val) {
-        this.isOn = isOn;
-        this.val = val;
+        //this.isOn = true;
+        this.value = val;
     }
 
     @Override
     public boolean isOn() {
-        return false;
+   return true;
+       // return this.isOn;
     }
 
     @Override
     public void setOn() {
-
     }
 
     @Override
@@ -26,6 +29,12 @@ public class StandardSensor implements Sensor{
 
     @Override
     public int read() {
-        return this.val;
+//        readings.add(val);
+        return this.value;
+    }
+
+    @Override
+    public List<Integer> readings() {
+     return new LinkedList<Integer>();
     }
 }

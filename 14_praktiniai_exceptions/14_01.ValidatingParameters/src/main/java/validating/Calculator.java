@@ -2,7 +2,7 @@ package validating;
 
 public class Calculator {
 
-    public int factorial(int num) {
+    public int factorial(int num) {//©KS
         if (num >= 0) {
             int answer = 1;
             for (int i = 1; i <= num; i++) {
