@@ -5,7 +5,9 @@ import philatelist.Philatelist;
 import philatelist.PostStamp;
 
 public class MyPhilatelist implements Philatelist {//©KS
-ArrayList<PostStamp> postStamps;
+
+	ArrayList<PostStamp> postStamps;
+	
 	public MyPhilatelist() {
 		postStamps = new ArrayList<PostStamp>();
 	}

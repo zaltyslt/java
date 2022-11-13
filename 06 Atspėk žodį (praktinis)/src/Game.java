@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.HashMap;
 
-public class Game {
+public class Game {//©KS
 	private Words word;
 	private Player player1;
 	private Player player2;
