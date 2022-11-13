@@ -1,5 +1,6 @@
 import java.util.function.Consumer;
 
+
 public class ManoCons implements Consumer<String> {//©KS
 
 	@Override
