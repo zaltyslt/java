@@ -3,81 +3,71 @@ import lt.vtvpmc.oop.practice.FeeCollector;
 
 public class MyAccount implements Account, FeeCollector {
 
-	
-	private String number;
-	private double balance;
 	private double earnings;
 	private int numberOfTransactions;
-	
-	
-	public MyAccount(String number, double balance) {
-		this.number = number;
-		this.balance = balance;
+	private Account holdedAccount;
+
+	public MyAccount(Account account) {
+		this.holdedAccount = account;
 		this.earnings = 0.0;
 		this.numberOfTransactions = 0;
 	}
-	
-		
+
 	@Override
 	public boolean deposit(double depositSum) {
-	if(depositSum <5) {
-		return false;
-		
+		if (depositSum < 5) {
+			return false;
 		}
 
-	double fee = depositSum * 0.02;
-	this.balance += depositSum - fee;
-	this.earnings += fee;
-	this.numberOfTransactions++;
-	return true;
-		
+		double fee = depositSum * 0.02;
+		this.holdedAccount.deposit(depositSum - fee);
+		this.earnings += fee;
+		this.numberOfTransactions++;
+		return true;
+
 	}
 
 	@Override
 	public double getBalance() {
-		// TODO Auto-generated method stub
-		return this.balance;
-	}
-
-	@Override
-	public String getNumber() {
-		// TODO Auto-generated method stub
-		return this.number;
+		return this.holdedAccount.getBalance();
 	}
 
 	@Override
 	public boolean withdraw(double withdrawSum) {
-		if(getBalance() > withdrawSum || withdrawSum >=5 || withdrawSum >= getBalance() / 10 ) {
-			
+		if (withdrawSum < 5 ||getBalance() < withdrawSum ||  withdrawSum <= getBalance() / 10) {
 			return false;
 		}
-		
-		this.balance -= withdrawSum;
-		return true;
+
+		this.holdedAccount.withdraw(withdrawSum);
+		this.numberOfTransactions++;
+				return true;
 	}
 
 	@Override
 	public double getAverageEarningsPerTransaction() {
-		
-//		return this.earnings / this.numberOfTransactions;
-		return 0;
-	}
 
+		return this.earnings / this.numberOfTransactions;
+
+	}
 
 	@Override
 	public double getEarnings() {
-		
-		//return this.earnings;
-		return 0;
-	}
 
+		return this.earnings;
+
+	}
 
 	@Override
 	public int getNumberOfTransactions() {
-		
-		//return this.numberOfTransactions ;
-		return 0;
+
+		return this.numberOfTransactions;
+
 	}
-	
+
+	@Override
+	public String getNumber() {
+
+		return this.holdedAccount.getNumber();
+	}
 
 }

@@ -2,11 +2,18 @@ import lt.vtvpmc.oop.practice.*;
 public class Main {
 
 	public static void main(String[] args) {
-		MyBank mybank = new MyBank();
-		MyAccount account1 = new MyAccount("001", 100);
-		mybank.openAccount();
-		account1.deposit(100);
-		mybank.openAccount();
+		
+		
+//		MyBank myBank = new MyBank();
+//		myBank.crateAccount();
+//		myBank.crateAccount();
+//		myBank.crateAccount();
+//		
+//		myBank.openAccount();
+//		
+//		Bank bank = new Bank();
+//		bank.openAccount();
+//		bank.getAccount("5507369799439194682").deposit(100);
 
 	}
 
