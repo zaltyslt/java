@@ -5,18 +5,18 @@ import lt.vtvpmc.oop.practice.Account;
 import lt.vtvpmc.oop.practice.Bank;
 import lt.vtvpmc.oop.practice.FeeCollector;
 
-public class MyBank extends Bank  {
+public class Bank implements FeeCollector {
 
-	private List<MyAccount> accounts;
+//	private List<MyAccount> accounts;
 
-	public MyBank() {
-		accounts =new ArrayList<>();
+	public Bank() {
+//		accounts =new ArrayList<>();
 		
 	}
 
 	
 	
-	private MyAccount postProcessAccount(MyAccount account) {
+	private MyAccount postProcessAccount(Account account) {
 		
 		return account;
 	}
