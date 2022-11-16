@@ -1,12 +1,22 @@
 package Templates.Strategy;
 
 public class GreeterEn extends Greeter {
-    public GreeterEn(String fName, String lName) {
-        super.greet(fName,lName);
+    public void greet(String fName, String lName, int ending) {
+
+        super.greet(fName, lName, ending);
     }
 
     @Override
     protected String getGreetingString() {
         return "Hello";
+    }
+
+    @Override
+    protected String getEndingString(int type) {
+        return switch (type) {
+            case 1 -> "!";
+            case 3 -> "!!!";
+            default -> ".";
+        };
     }
 }
