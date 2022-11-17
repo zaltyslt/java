@@ -9,8 +9,5 @@
         <module name="Templates" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Templates" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>

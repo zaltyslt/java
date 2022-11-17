@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e59b1e9b-75b8-47e1-8f04-ae797675dd2a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ITADesign.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Decorator/Greeter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Decorator/GreeterExclamationMarkDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Decorator/GreeterExclamationMarkInheritance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Decorator/GreeterExclamationMarkUpperCaseInheritance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Decorator/GreeterImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Decorator/GreeterUppercaseDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Decorator/appRunMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Design_problem/itadesign/beerdrinker/AppMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Design_problem/itadesign/beerdrinker/MeBeerConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Design_problem/itadesign/beerdrinker/MyBeerBottle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Design_problem/itadesign/beerdrinker/MyBeerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Design_problem/itadesign/beerdrinker/NonAlcoBeerBottle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/Design_problem/itadesign/test/MyBeerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/StrategyAndTemplates/EnglishGreetingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/StrategyAndTemplates/Greeter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/StrategyAndTemplates/GreeterEn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/StrategyAndTemplates/GreeterLt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/StrategyAndTemplates/GreeterStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/StrategyAndTemplates/IEndingString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/StrategyAndTemplates/IGreeterLanguageStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/StrategyAndTemplates/LithuanianGreetingStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/StrategyAndTemplates/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/15_Templates.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/Templates.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/src/main/java/Templates/Strategy/EnglishGreetingStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/src/main/java/Templates/Strategy/Greeter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/src/main/java/Templates/Strategy/GreeterEn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/src/main/java/Templates/Strategy/GreeterLt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/src/main/java/Templates/Strategy/GreeterStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/src/main/java/Templates/Strategy/IEndingString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/src/main/java/Templates/Strategy/IGreeterLanguageStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/src/main/java/Templates/Strategy/LithuanianGreetingStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/src/main/java/Templates/Strategy/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../payment.pdf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2HgW3MZBILmvBTUl4XhQUhVSIMf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "F:/desktop/codedump/java/15_Templates/lib",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\desktop\codedump\java\15_Templates\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\desktop\codedump\java\15_Templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MyBeerTest">
+    <configuration name="AppMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Templates.Design_problem.itadesign.beerdrinker.AppMain" />
+      <module name="Templates" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Templates.Design_problem.itadesign.beerdrinker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="appRunMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Templates.Decorator.appRunMain" />
+      <module name="Templates" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Templates.Decorator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBeerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Templates" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Templates.Design_problem.itadesign.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Templates.Design_problem.itadesign.test" />
+      <option name="MAIN_CLASS_NAME" value="Templates.Design_problem.itadesign.test.MyBeerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBeerTest.testAddingMalt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Templates" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="itadesign.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Templates.Design_problem.itadesign.test" />
+      <option name="MAIN_CLASS_NAME" value="Templates.Design_problem.itadesign.test.MyBeerTest" />
+      <option name="METHOD_NAME" value="testAddingMalt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBeerTest.testInitialBeerFactoryProduction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Templates" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="itadesign.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Templates.Design_problem.itadesign.test" />
+      <option name="MAIN_CLASS_NAME" value="Templates.Design_problem.itadesign.test.MyBeerTest" />
+      <option name="METHOD_NAME" value="testInitialBeerFactoryProduction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MyBeerTest" />
+        <item itemvalue="JUnit.MyBeerTest.testAddingMalt" />
+        <item itemvalue="Application.AppMain" />
+        <item itemvalue="JUnit.MyBeerTest.testAddingMalt" />
+        <item itemvalue="JUnit.MyBeerTest.testInitialBeerFactoryProduction" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e59b1e9b-75b8-47e1-8f04-ae797675dd2a" name="Changes" comment="" />
+      <created>1668707007758</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668707007758</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Templates.Design_problem.itadesign.beerdrinker.MyBeerFactory" memberName="maltAmount" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
