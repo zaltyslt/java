@@ -1,4 +1,4 @@
-package tobechanged;
+package lt.vtmc.ks.bank.account;
 
 import ibank.Account;
 
@@ -46,14 +46,15 @@ public class MyDebitAccount implements Account {
     @Override
     public boolean withdraw(BigDecimal amount) {
 //1 daugiau, 0 lygu, -1 maziau
-        if((amount!= null)&&(( amount.compareTo(new BigDecimal(0))) >0)
+        if((amount!= null)&&(( amount.compareTo(BigDecimal.ZERO)) >0)
                           &&( this.ballance.compareTo(amount) >=0) ){
             BigDecimal tempBalance = this.ballance.subtract(amount);
             this.ballance = tempBalance;
             return true;
         }
-
-
-        return false;
+     return false;
+    }
+    protected void setBalance(BigDecimal amount){
+        this.ballance = amount;
     }
 }
