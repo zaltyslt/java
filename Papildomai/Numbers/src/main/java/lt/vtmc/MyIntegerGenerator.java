@@ -16,6 +16,8 @@ public class MyIntegerGenerator implements IntegerGenerator {
         }
     }
 
+
+
     @Override
     public Integer getNext() {
       if (numbers.size() < pos){
