@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e59b1e9b-75b8-47e1-8f04-ae797675dd2a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ITAPhones.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/news_service_assignment_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/Service/AppMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/Service/CensoredArticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/Service/MyNewsServiceCensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/Service/MyNewsServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/Service/SwearWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/PhoneAdapter/AppMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/PhoneAdapter/MobilePhoneAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mine/Vitali/NewsServiceVitalija/lt/vitali/news/src/AppMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Papildomai/Numbers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Papildomai/Numbers/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,18 +47,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/desktop/codedump/java/15_Templates/javaDocs&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "F:/desktop/codedump/java/15_Templates",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\desktop\codedump\java\15_Templates\javaDocs" />
