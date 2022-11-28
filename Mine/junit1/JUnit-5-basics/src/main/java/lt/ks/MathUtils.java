@@ -1,2 +1,7 @@
-package lt.ks;public class MathUtils {
+package lt.ks;
+
+public class MathUtils {
+    public int add (int a, int b){
+        return a+b;
+    }
 }
