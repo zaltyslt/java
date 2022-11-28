@@ -1,0 +1,948 @@
+Index: src/main/java/lt/vtmc/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lt.vtmc;\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n        MyIntegerGenerator my = new MyIntegerGenerator(1,10);\r\nwhile(my.getNext())\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/vtmc/Main.java b/src/main/java/lt/vtmc/Main.java
+--- a/src/main/java/lt/vtmc/Main.java	(revision 7838f267dff9e0f5ff7bb35efd4d740188b667ab)
++++ b/src/main/java/lt/vtmc/Main.java	(date 1669151404512)
+@@ -1,8 +1,9 @@
+ package lt.vtmc;
+ 
++
+ public class Main {
+     public static void main(String[] args) {
+-        MyIntegerGenerator my = new MyIntegerGenerator(1,10);
+-while(my.getNext())
++        MyExercises my = new MyExercises();
++        my.createFilteredIntegerGenerator(new MyIntegerGenerator(1, 10), x -> x % 2 == 0);
+     }
+ }
+\ No newline at end of file
+Index: ../../Mine/lambda0/untitled/.idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Mine/lambda0/untitled/.idea/jarRepositories.xml b/../../Mine/lambda0/untitled/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(date 1669137838730)
++++ b/../../Mine/lambda0/untitled/.idea/jarRepositories.xml	(date 1669137838730)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: ../../Mine/lambda0/untitled/.idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Mine/lambda0/untitled/.idea/encodings.xml b/../../Mine/lambda0/untitled/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	(date 1669137838721)
++++ b/../../Mine/lambda0/untitled/.idea/encodings.xml	(date 1669137838721)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
++  </component>
++</project>
+\ No newline at end of file
+Index: ../../Mine/lambda0/untitled/.idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Mine/lambda0/untitled/.idea/compiler.xml b/../../Mine/lambda0/untitled/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1669137838711)
++++ b/../../Mine/lambda0/untitled/.idea/compiler.xml	(date 1669137838711)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="untitled" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
+Index: ../../Mine/lambda0/untitled/src/main/java/Filter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Mine/lambda0/untitled/src/main/java/Filter.java b/../../Mine/lambda0/untitled/src/main/java/Filter.java
+new file mode 100644
+--- /dev/null	(date 1669138342254)
++++ b/../../Mine/lambda0/untitled/src/main/java/Filter.java	(date 1669138342254)
+@@ -0,0 +1,60 @@
++public class Filter {
++
++    public interface Command
++    {
++        public void execute(Object data);
++    }
++
++
++    public static class PrintCommand implements Command
++    {
++        public void execute(Object data)
++        {
++            System.out.println(data.toString());
++        }
++    }
++
++
++
++    public static void callCommand(Command command, Object data)
++    {
++        command.execute(data);
++    }
++
++    public static void main(String... args)
++    {
++        PrintCommand commandKintamasis =  new PrintCommand(Object data) {System.out.println(data.toString());}
++        }
++        {
++            System.out.println(data.toString());
++        }
++        callCommand(new PrintCommand(), "hello world");
++    }
++}
++/*
++public class CommandExample
++{
++    public interface Command
++    {
++        public void execute(Object data);
++    }
++
++    public class PrintCommand implements Command
++    {
++        public void execute(Object data)
++        {
++            System.out.println(data.toString());
++        }
++    }
++
++    public static void callCommand(Command command, Object data)
++    {
++        command.execute(data);
++    }
++
++    public static void main(String... args)
++    {
++        callCommand(new PrintCommand(), "hello world");
++    }
++}
++*/
+\ No newline at end of file
+Index: ../../Mine/lambda0/untitled/.idea/codeStyles/codeStyleConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Mine/lambda0/untitled/.idea/codeStyles/codeStyleConfig.xml b/../../Mine/lambda0/untitled/.idea/codeStyles/codeStyleConfig.xml
+new file mode 100644
+--- /dev/null	(date 1669137786301)
++++ b/../../Mine/lambda0/untitled/.idea/codeStyles/codeStyleConfig.xml	(date 1669137786301)
+@@ -0,0 +1,5 @@
++<component name="ProjectCodeStyleConfiguration">
++  <state>
++    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default" />
++  </state>
++</component>
+\ No newline at end of file
+Index: ../../.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Compiled class file\r\n*.class\r\n\r\n# Log file\r\n*.log\r\n\r\n# BlueJ files\r\n*.ctxt\r\n\r\n# Mobile Tools for Java (J2ME)\r\n.mtj.tmp/\r\n\r\n# Package Files #\r\n*.jar\r\n*.war\r\n*.nar\r\n*.ear\r\n*.zip\r\n*.tar.gz\r\n*.rar\r\n\r\n# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml\r\nhs_err_pid*\r\n\r\n.metadata\r\nbin/\r\ntmp/\r\n*.tmp\r\n*.bak\r\n*.swp\r\n*~.nib\r\nlocal.properties\r\n.settings/\r\n.loadpath\r\n.recommenders\r\n\r\n# External tool builders\r\n.externalToolBuilders/\r\n\r\n# Locally stored \"Eclipse launch configurations\"\r\n*.launch\r\n\r\n# PyDev specific (Python IDE for Eclipse)\r\n*.pydevproject\r\n\r\n# CDT-specific (C/C++ Development Tooling)\r\n.cproject\r\n\r\n# CDT- autotools\r\n.autotools\r\n\r\n# Java annotation processor (APT)\r\n.factorypath\r\n\r\n# PDT-specific (PHP Development Tools)\r\n.buildpath\r\n\r\n# sbteclipse plugin\r\n.target\r\n\r\n# Tern plugin\r\n.tern-project\r\n\r\n# TeXlipse plugin\r\n.texlipse\r\n\r\n# STS (Spring Tool Suite)\r\n.springBeans\r\n\r\n# Code Recommenders\r\n.recommenders/\r\n\r\n# Annotation Processing\r\n.apt_generated/\r\n.apt_generated_test/\r\n\r\n# Scala IDE specific (Scala & Java development for Eclipse)\r\n.cache-main\r\n.scala_dependencies\r\n.worksheet\r\n\r\n# Uncomment this line if you wish to ignore the project description file.\r\n# Typically, this file would be tracked if it contains build/dependency configurations:\r\n#.project\r\n\r\n# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider\r\n# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839\r\n\r\n# User-specific stuff\r\n.idea/**/workspace.xml\r\n.idea/**/tasks.xml\r\n.idea/**/usage.statistics.xml\r\n.idea/**/dictionaries\r\n.idea/**/shelf\r\n\r\n# AWS User-specific\r\n.idea/**/aws.xml\r\n\r\n# Generated files\r\n.idea/**/contentModel.xml\r\n\r\n# Sensitive or high-churn files\r\n.idea/**/dataSources/\r\n.idea/**/dataSources.ids\r\n.idea/**/dataSources.local.xml\r\n.idea/**/sqlDataSources.xml\r\n.idea/**/dynamic.xml\r\n.idea/**/uiDesigner.xml\r\n.idea/**/dbnavigator.xml\r\n\r\n# Gradle\r\n.idea/**/gradle.xml\r\n.idea/**/libraries\r\n\r\n# Gradle and Maven with auto-import\r\n# When using Gradle or Maven with auto-import, you should exclude module files,\r\n# since they will be recreated, and may cause churn.  Uncomment if using\r\n# auto-import.\r\n# .idea/artifacts\r\n# .idea/compiler.xml\r\n# .idea/jarRepositories.xml\r\n# .idea/modules.xml\r\n# .idea/*.iml\r\n# .idea/modules\r\n# *.iml\r\n# *.ipr\r\n\r\n# CMake\r\ncmake-build-*/\r\n\r\n# Mongo Explorer plugin\r\n.idea/**/mongoSettings.xml\r\n\r\n# File-based project format\r\n*.iws\r\n\r\n# IntelliJ\r\nout/\r\n\r\n# mpeltonen/sbt-idea plugin\r\n.idea_modules/\r\n\r\n# JIRA plugin\r\natlassian-ide-plugin.xml\r\n\r\n# Cursive Clojure plugin\r\n.idea/replstate.xml\r\n\r\n# Crashlytics plugin (for Android Studio and IntelliJ)\r\ncom_crashlytics_export_strings.xml\r\ncrashlytics.properties\r\ncrashlytics-build.properties\r\nfabric.properties\r\n\r\n# Editor-based Rest Client\r\n.idea/httpRequests\r\n\r\n# Android studio 3.1+ serialized cache file\r\n.idea/caches/build_file_checksums.ser\r\n\r\n# End of https://mrkandreev.name/snippets/gitignore-generator/#Java,Eclipse,Intellij
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../.gitignore b/../../.gitignore
+--- a/../../.gitignore	(revision 7838f267dff9e0f5ff7bb35efd4d740188b667ab)
++++ b/../../.gitignore	(date 1669126958792)
+@@ -11,7 +11,7 @@
+ .mtj.tmp/
+ 
+ # Package Files #
+-*.jar
++#*.jar
+ *.war
+ *.nar
+ *.ear
+Index: ../../Mine/lambda0/untitled/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Mine/lambda0/untitled/.idea/vcs.xml b/../../Mine/lambda0/untitled/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1669137786284)
++++ b/../../Mine/lambda0/untitled/.idea/vcs.xml	(date 1669137786284)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/../../.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: ../../Mine/lambda0/untitled/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Mine/lambda0/untitled/.idea/misc.xml b/../../Mine/lambda0/untitled/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1669137786269)
++++ b/../../Mine/lambda0/untitled/.idea/misc.xml	(date 1669137786269)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/main/java/lt/vtmc/MyIntegerGenerator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lt.vtmc;\r\n\r\nimport lt.itakademija.exam.IntegerGenerator;\r\n\r\nimport java.util.LinkedList;\r\nimport java.util.List;\r\n\r\npublic class MyIntegerGenerator implements IntegerGenerator {\r\n    List<Integer> numbers = new LinkedList<>();\r\n    int pos = 0;\r\n\r\n    public MyIntegerGenerator(int start, int end) {\r\n\r\n        for(int i = start; i <= end; i++){\r\n            numbers.add(i);\r\n        }\r\n    }\r\n\r\n\r\n\r\n    @Override\r\n    public Integer getNext() {\r\n      if (numbers.size() < pos){\r\n          pos++;\r\n          return  numbers.get(pos-1);\r\n      }\r\n\r\n        return null;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/vtmc/MyIntegerGenerator.java b/src/main/java/lt/vtmc/MyIntegerGenerator.java
+--- a/src/main/java/lt/vtmc/MyIntegerGenerator.java	(revision 7838f267dff9e0f5ff7bb35efd4d740188b667ab)
++++ b/src/main/java/lt/vtmc/MyIntegerGenerator.java	(date 1669151404497)
+@@ -2,29 +2,31 @@
+ 
+ import lt.itakademija.exam.IntegerGenerator;
+ 
+-import java.util.LinkedList;
++import java.util.ArrayList;
++import java.util.Iterator;
+ import java.util.List;
+ 
+ public class MyIntegerGenerator implements IntegerGenerator {
+-    List<Integer> numbers = new LinkedList<>();
+-    int pos = 0;
++    List<Integer> numbers = new ArrayList<>();
++    Iterator iterator;
+ 
+     public MyIntegerGenerator(int start, int end) {
+-
+-        for(int i = start; i <= end; i++){
++        for (int i = start; i <= end; i++) {
+             numbers.add(i);
+         }
++        iterator = numbers.iterator();
+     }
+ 
+-
++    public MyIntegerGenerator(List<Integer> list) {
++        this.numbers = list;
++        iterator = numbers.iterator();
++    }
+ 
+     @Override
+     public Integer getNext() {
+-      if (numbers.size() < pos){
+-          pos++;
+-          return  numbers.get(pos-1);
+-      }
+-
++        if (iterator.hasNext()) {
++            return (Integer) iterator.next();
++        }
+         return null;
+     }
+ }
+Index: ../../Mine/lambda0/untitled/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Mine/lambda0/untitled/.idea/workspace.xml b/../../Mine/lambda0/untitled/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1669145667000)
++++ b/../../Mine/lambda0/untitled/.idea/workspace.xml	(date 1669145667000)
+@@ -0,0 +1,88 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="6e54796e-38d0-454e-ac22-ef849a9817de" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/Filter.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../../Papildomai/Numbers/.idea/libraries/numbers__2_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../../Papildomai/Numbers/lib/numbers.jar" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.gitignore" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../../Papildomai/Numbers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Papildomai/Numbers/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../../Papildomai/Numbers/src/main/java/lt/vtmc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Papildomai/Numbers/src/main/java/lt/vtmc/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../../Papildomai/Numbers/src/main/java/lt/vtmc/MyExercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Papildomai/Numbers/src/main/java/lt/vtmc/MyExercises.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../../Papildomai/Numbers/src/main/java/lt/vtmc/MyIntegerGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Papildomai/Numbers/src/main/java/lt/vtmc/MyIntegerGenerator.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../../Papildomai/Numbers/src/main/java/lt/vtmc/MyNumberFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Papildomai/Numbers/src/main/java/lt/vtmc/MyNumberFilter.java" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="CodeStyleSettingsInfer">
++    <option name="done" value="true" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
++  <component name="ProjectCodeStyleSettingsMigration">
++    <option name="version" value="2" />
++  </component>
++  <component name="ProjectId" id="2HubBOxA2dMdR8MMvruWNiVNNPF" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "last_opened_file_path": "F:/desktop/codedump/java/15_Templates/src/main/java/Templates/News",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0"
++  }
++}]]></component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="6e54796e-38d0-454e-ac22-ef849a9817de" name="Changes" comment="" />
++      <created>1669137781669</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1669137781669</updated>
++    </task>
++    <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/libraries/numbers__2_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/numbers__2_.xml b/.idea/libraries/numbers__2_.xml
+new file mode 100644
+--- /dev/null	(date 1669127158164)
++++ b/.idea/libraries/numbers__2_.xml	(date 1669127158164)
+@@ -0,0 +1,9 @@
++<component name="libraryTable">
++  <library name="numbers (2)">
++    <CLASSES>
++      <root url="jar://$PROJECT_DIR$/lib/numbers.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"13d4eae1-d2a1-4d28-9d42-9a99f6212bfa\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/vcs.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/lt/vtmc/MyIntegerGenerator.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/lt/vtmc/MyIntegerGenerator.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/../..\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2HtQ79xALKKdkn3tehwglzh2CUz\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Rytas/Desktop/gitHub/java/Papildomai/Numbers\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.0\",\r\n    \"settings.editor.selected.configurable\": \"project.propVCSSupport.DirectoryMappings\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Rytas\\Desktop\\gitHub\\java\\15_Templates\\DesignProblems\\Numbers\\lib\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Main\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lt.vtmc.Main\" />\r\n      <module name=\"Numbers\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"lt.vtmc.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MyBaseTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Numbers\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"lt.vtmc.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"lt.vtmc\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lt.vtmc.MyBaseTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MyBaseTest.generatesFilteredIntegers (1)\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Numbers\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"lt.vtmc.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"lt.vtmc\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lt.vtmc.MyBaseTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"generatesFilteredIntegers\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MyBaseTest.generatesIntegers (1)\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Numbers\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"lt.vtmc.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"lt.vtmc\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lt.vtmc.MyBaseTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"generatesIntegers\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MyBaseTest.generatesIntegers\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Numbers\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"lt.vtmc.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"lt.vtmc\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lt.vtmc.MyBaseTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"generatesIntegers\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"JUnit.MyBaseTest\" />\r\n        <item itemvalue=\"JUnit.MyBaseTest.generatesFilteredIntegers (1)\" />\r\n        <item itemvalue=\"JUnit.MyBaseTest.generatesIntegers (1)\" />\r\n        <item itemvalue=\"JUnit.MyBaseTest.generatesIntegers\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"13d4eae1-d2a1-4d28-9d42-9a99f6212bfa\" name=\"Changes\" comment=\"\" />\r\n      <created>1669101731674</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1669101731674</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <ignored-roots>\r\n      <path value=\"$PROJECT_DIR$/../../..\" />\r\n    </ignored-roots>\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>jar://$PROJECT_DIR$/lib/numbers.jar!/lt/itakademija/exam/test/BaseTest.class</url>\r\n          <line>165</line>\r\n          <properties class=\"lt.itakademija.exam.test.BaseTest\" method=\"generatesFilteredIntegers\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-method\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/lt/vtmc/MyIntegerGenerator.java</url>\r\n          <line>11</line>\r\n          <properties class=\"lt.vtmc.MyIntegerGenerator\" method=\"&lt;init&gt;\">\r\n            <option name=\"EMULATED\" value=\"true\" />\r\n            <option name=\"WATCH_EXIT\" value=\"false\" />\r\n          </properties>\r\n          <option name=\"timeStamp\" value=\"4\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7838f267dff9e0f5ff7bb35efd4d740188b667ab)
++++ b/.idea/workspace.xml	(date 1669151132574)
+@@ -4,10 +4,31 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="13d4eae1-d2a1-4d28-9d42-9a99f6212bfa" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++    <list default="true" id="13d4eae1-d2a1-4d28-9d42-9a99f6212bfa" name="Changes" comment="Numbers">
++      <change afterPath="$PROJECT_DIR$/../../15_Templates/src/main/java/Templates/News/.idea/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../15_Templates/src/main/java/Templates/News/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../15_Templates/src/main/java/Templates/News/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../15_Templates/src/main/java/Templates/News/.idea/modules.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../15_Templates/src/main/java/Templates/News/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../15_Templates/src/main/java/Templates/News/News.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../Mine/lambda0/untitled/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../Mine/lambda0/untitled/.idea/compiler.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../Mine/lambda0/untitled/.idea/encodings.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../Mine/lambda0/untitled/.idea/jarRepositories.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../Mine/lambda0/untitled/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../Mine/lambda0/untitled/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../Mine/lambda0/untitled/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../Mine/lambda0/untitled/pom.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../../Mine/lambda0/untitled/src/main/java/Filter.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/libraries/numbers__2_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/lib/numbers.jar" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../../15_Templates/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../15_Templates/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/vtmc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/vtmc/MyExercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/MyExercises.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/lt/vtmc/MyIntegerGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/MyIntegerGenerator.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/lt/vtmc/MyNumberFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/MyNumberFilter.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -29,6 +50,9 @@
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
++  </component>
++  <component name="ProblemsViewState">
++    <option name="selectedTabId" value="CurrentFile" />
+   </component>
+   <component name="ProjectCodeStyleSettingsMigration">
+     <option name="version" value="2" />
+@@ -48,10 +72,11 @@
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "last_opened_file_path": "C:/Users/Rytas/Desktop/gitHub/java/Papildomai/Numbers",
++    "last_opened_file_path": "F:/desktop/codedump/java/Papildomai/SocialNetwork",
+     "project.structure.last.edited": "Modules",
+     "project.structure.proportion": "0.0",
+     "project.structure.side.proportion": "0.0",
++    "run.code.analysis.last.selected.profile": "pProject Default",
+     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+   }
+ }]]></component>
+@@ -59,8 +84,11 @@
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="C:\Users\Rytas\Desktop\gitHub\java\15_Templates\DesignProblems\Numbers\lib" />
+     </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="F:\desktop\codedump\java\Papildomai\Numbers\lib" />
++    </key>
+   </component>
+-  <component name="RunManager" selected="Application.Main">
++  <component name="RunManager" selected="JUnit.MyBaseTest">
+     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="lt.vtmc.Main" />
+       <module name="Numbers" />
+@@ -105,7 +133,7 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="MyBaseTest.generatesIntegers (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="MyBaseTest.generatesFilteredIntegers (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="Numbers" />
+       <extension name="coverage">
+         <pattern>
+@@ -115,13 +143,13 @@
+       </extension>
+       <option name="PACKAGE_NAME" value="lt.vtmc" />
+       <option name="MAIN_CLASS_NAME" value="lt.vtmc.MyBaseTest" />
+-      <option name="METHOD_NAME" value="generatesIntegers" />
++      <option name="METHOD_NAME" value="generatesFilteredIntegers" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="MyBaseTest.generatesIntegers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="MyBaseTest.generatesFilteredIntegers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="Numbers" />
+       <extension name="coverage">
+         <pattern>
+@@ -131,7 +159,7 @@
+       </extension>
+       <option name="PACKAGE_NAME" value="lt.vtmc" />
+       <option name="MAIN_CLASS_NAME" value="lt.vtmc.MyBaseTest" />
+-      <option name="METHOD_NAME" value="generatesIntegers" />
++      <option name="METHOD_NAME" value="generatesFilteredIntegers" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+@@ -139,11 +167,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Main" />
+         <item itemvalue="JUnit.MyBaseTest" />
++        <item itemvalue="Application.Main" />
++        <item itemvalue="JUnit.MyBaseTest.generatesFilteredIntegers (2)" />
+         <item itemvalue="JUnit.MyBaseTest.generatesFilteredIntegers (1)" />
+-        <item itemvalue="JUnit.MyBaseTest.generatesIntegers (1)" />
+-        <item itemvalue="JUnit.MyBaseTest.generatesIntegers" />
++        <item itemvalue="JUnit.MyBaseTest.generatesFilteredIntegers" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -174,6 +202,8 @@
+     <ignored-roots>
+       <path value="$PROJECT_DIR$/../../.." />
+     </ignored-roots>
++    <MESSAGE value="Numbers" />
++    <option name="LAST_COMMIT_MESSAGE" value="Numbers" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+@@ -181,20 +211,25 @@
+         <line-breakpoint enabled="true" type="java-method">
+           <url>jar://$PROJECT_DIR$/lib/numbers.jar!/lt/itakademija/exam/test/BaseTest.class</url>
+           <line>165</line>
+-          <properties class="lt.itakademija.exam.test.BaseTest" method="generatesFilteredIntegers">
++          <properties class="lt.itakademija.exam.test.BaseTest">
+             <option name="EMULATED" value="true" />
+             <option name="WATCH_EXIT" value="false" />
+           </properties>
+           <option name="timeStamp" value="1" />
+         </line-breakpoint>
+         <line-breakpoint enabled="true" type="java-method">
+-          <url>file://$PROJECT_DIR$/src/main/java/lt/vtmc/MyIntegerGenerator.java</url>
+-          <line>11</line>
+-          <properties class="lt.vtmc.MyIntegerGenerator" method="&lt;init&gt;">
++          <url>jar://$PROJECT_DIR$/lib/numbers.jar!/lt/itakademija/exam/test/BaseTest.class</url>
++          <line>63</line>
++          <properties class="lt.itakademija.exam.test.BaseTest" method="generatesFilteredIntegers">
+             <option name="EMULATED" value="true" />
+             <option name="WATCH_EXIT" value="false" />
+           </properties>
+-          <option name="timeStamp" value="4" />
++          <option name="timeStamp" value="15" />
++        </line-breakpoint>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/main/java/lt/vtmc/Main.java</url>
++          <line>7</line>
++          <option name="timeStamp" value="16" />
+         </line-breakpoint>
+       </breakpoints>
+     </breakpoint-manager>
+Index: ../../15_Templates/src/main/java/Templates/News/News.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../15_Templates/src/main/java/Templates/News/News.iml b/../../15_Templates/src/main/java/Templates/News/News.iml
+new file mode 100644
+--- /dev/null	(date 1669145777208)
++++ b/../../15_Templates/src/main/java/Templates/News/News.iml	(date 1669145777208)
+@@ -0,0 +1,29 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" packagePrefix="Templates.News" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="module-library" exported="">
++      <library>
++        <CLASSES>
++          <root url="jar://$MODULE_DIR$/../../../../../lib/junit-4.10.jar!/" />
++        </CLASSES>
++        <JAVADOC />
++        <SOURCES />
++      </library>
++    </orderEntry>
++    <orderEntry type="module-library" exported="">
++      <library>
++        <CLASSES>
++          <root url="jar://$MODULE_DIR$/../../../../../lib/news-service-assignment-1.0.jar!/" />
++        </CLASSES>
++        <JAVADOC />
++        <SOURCES />
++      </library>
++    </orderEntry>
++  </component>
++</module>
+\ No newline at end of file
+Index: ../../15_Templates/src/main/java/Templates/News/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../15_Templates/src/main/java/Templates/News/.idea/modules.xml b/../../15_Templates/src/main/java/Templates/News/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1669145697707)
++++ b/../../15_Templates/src/main/java/Templates/News/.idea/modules.xml	(date 1669145697707)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/News.iml" filepath="$PROJECT_DIR$/News.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: ../../15_Templates/src/main/java/Templates/News/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../15_Templates/src/main/java/Templates/News/.idea/misc.xml b/../../15_Templates/src/main/java/Templates/News/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1669145697716)
++++ b/../../15_Templates/src/main/java/Templates/News/.idea/misc.xml	(date 1669145697716)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: ../../15_Templates/src/main/java/Templates/News/.idea/codeStyles/codeStyleConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../15_Templates/src/main/java/Templates/News/.idea/codeStyles/codeStyleConfig.xml b/../../15_Templates/src/main/java/Templates/News/.idea/codeStyles/codeStyleConfig.xml
+new file mode 100644
+--- /dev/null	(date 1669145697729)
++++ b/../../15_Templates/src/main/java/Templates/News/.idea/codeStyles/codeStyleConfig.xml	(date 1669145697729)
+@@ -0,0 +1,5 @@
++<component name="ProjectCodeStyleConfiguration">
++  <state>
++    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default" />
++  </state>
++</component>
+\ No newline at end of file
+Index: ../../15_Templates/src/main/java/Templates/News/.idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../15_Templates/src/main/java/Templates/News/.idea/vcs.xml b/../../15_Templates/src/main/java/Templates/News/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1669145697739)
++++ b/../../15_Templates/src/main/java/Templates/News/.idea/vcs.xml	(date 1669145697739)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/../../../../../.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: ../../15_Templates/src/main/java/Templates/News/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../15_Templates/src/main/java/Templates/News/.idea/.gitignore b/../../15_Templates/src/main/java/Templates/News/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1669145698093)
++++ b/../../15_Templates/src/main/java/Templates/News/.idea/.gitignore	(date 1669145698093)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: ../../15_Templates/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e59b1e9b-75b8-47e1-8f04-ae797675dd2a\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/libraries/ITAPhones.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/libraries/news_service_assignment_1_0.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/Templates/News/Service/AppMain.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/Templates/News/Service/CensoredArticle.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/Templates/News/Service/MyNewsServiceCensor.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/Templates/News/Service/MyNewsServiceTest.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/Templates/News/Service/SwearWords.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/Templates/PhoneAdapter/AppMain.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/Templates/PhoneAdapter/MobilePhoneAdapter.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"Enum\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2HgW3MZBILmvBTUl4XhQUhVSIMf\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;F:/desktop/codedump/java/15_Templates/javaDocs&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"F:\\desktop\\codedump\\java\\15_Templates\\javaDocs\" />\r\n      <recent name=\"F:\\desktop\\codedump\\java\\15_Templates\\lib\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"F:\\desktop\\codedump\\java\\15_Templates\\lib\" />\r\n      <recent name=\"F:\\desktop\\codedump\\java\\15_Templates\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.MyNewsServiceTest\">\r\n    <configuration name=\"AppMain\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Templates.News.Service.AppMain\" />\r\n      <module name=\"Templates\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Templates.News.Service.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Templates.PhoneAdapter.AppMain\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Templates.PhoneAdapter.AppMain\" />\r\n      <module name=\"Templates\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Templates.PhoneAdapter.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MyBeerTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Templates\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"Templates.Design_problem.itadesign.test.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"Templates.Design_problem.itadesign.test\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Templates.Design_problem.itadesign.test.MyBeerTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MyBeerTest.testAddingMalt\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Templates\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"itadesign.test.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"Templates.Design_problem.itadesign.test\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Templates.Design_problem.itadesign.test.MyBeerTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"testAddingMalt\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"MyNewsServiceTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Templates\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"lt.vtvpmc.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"Templates.News.Service\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Templates.News.Service.MyNewsServiceTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.MyNewsServiceTest\" />\r\n        <item itemvalue=\"Application.AppMain\" />\r\n        <item itemvalue=\"JUnit.MyNewsServiceTest\" />\r\n        <item itemvalue=\"JUnit.MyNewsServiceTest\" />\r\n        <item itemvalue=\"Application.Templates.PhoneAdapter.AppMain\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e59b1e9b-75b8-47e1-8f04-ae797675dd2a\" name=\"Changes\" comment=\"\" />\r\n      <created>1668707007758</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1668707007758</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <pin-to-top-manager>\r\n      <pinned-members>\r\n        <PinnedItemInfo parentTag=\"Templates.Design_problem.itadesign.beerdrinker.MyBeerFactory\" memberName=\"maltAmount\" />\r\n      </pinned-members>\r\n    </pin-to-top-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../15_Templates/.idea/workspace.xml b/../../15_Templates/.idea/workspace.xml
+--- a/../../15_Templates/.idea/workspace.xml	(revision 7838f267dff9e0f5ff7bb35efd4d740188b667ab)
++++ b/../../15_Templates/.idea/workspace.xml	(date 1669146601075)
+@@ -5,17 +5,30 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="e59b1e9b-75b8-47e1-8f04-ae797675dd2a" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/libraries/ITAPhones.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/libraries/news_service_assignment_1_0.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/Service/AppMain.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/Service/CensoredArticle.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/Service/MyNewsServiceCensor.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/Service/MyNewsServiceTest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/Service/SwearWords.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/PhoneAdapter/AppMain.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/PhoneAdapter/MobilePhoneAdapter.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/.idea/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/.idea/modules.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/Templates/News/News.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Mine/lambda0/untitled/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Mine/lambda0/untitled/.idea/compiler.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Mine/lambda0/untitled/.idea/encodings.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Mine/lambda0/untitled/.idea/jarRepositories.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Mine/lambda0/untitled/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Mine/lambda0/untitled/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Mine/lambda0/untitled/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Mine/lambda0/untitled/pom.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Mine/lambda0/untitled/src/main/java/Filter.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Papildomai/Numbers/.idea/libraries/numbers__2_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../Papildomai/Numbers/lib/numbers.jar" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../Papildomai/Numbers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Papildomai/Numbers/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../Papildomai/Numbers/src/main/java/lt/vtmc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Papildomai/Numbers/src/main/java/lt/vtmc/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../Papildomai/Numbers/src/main/java/lt/vtmc/MyExercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Papildomai/Numbers/src/main/java/lt/vtmc/MyExercises.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../Papildomai/Numbers/src/main/java/lt/vtmc/MyIntegerGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Papildomai/Numbers/src/main/java/lt/vtmc/MyIntegerGenerator.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/../Papildomai/Numbers/src/main/java/lt/vtmc/MyNumberFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Papildomai/Numbers/src/main/java/lt/vtmc/MyNumberFilter.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -55,18 +68,18 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;F:/desktop/codedump/java/15_Templates/javaDocs&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "last_opened_file_path": "F:/desktop/codedump/java/15_Templates",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "run.code.analysis.last.selected.profile": "pProject Default"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="F:\desktop\codedump\java\15_Templates\javaDocs" />
+Index: src/main/java/lt/vtmc/MyNumberFilter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lt.vtmc;\r\n\r\nimport lt.itakademija.exam.NumberFilter;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class MyNumberFilter implements NumberFilter {\r\n    private List<Integer> numbers = new ArrayList<>();\r\n\r\n//    public void addToFilter(int number) {\r\n//        if (!this.numbers.contains(number)) {\r\n//            numbers.add(number);\r\n//        }\r\n//    }\r\n\r\n\r\n\r\n    @Override\r\n    public boolean accept(int number) {\r\n        if (this.numbers.contains(number)) {\r\n            return true;\r\n        }\r\n        return false;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/vtmc/MyNumberFilter.java b/src/main/java/lt/vtmc/MyNumberFilter.java
+--- a/src/main/java/lt/vtmc/MyNumberFilter.java	(revision 7838f267dff9e0f5ff7bb35efd4d740188b667ab)
++++ b/src/main/java/lt/vtmc/MyNumberFilter.java	(date 1669151404502)
+@@ -2,25 +2,15 @@
+ 
+ import lt.itakademija.exam.NumberFilter;
+ 
+-import java.util.ArrayList;
+-import java.util.List;
+-
+ public class MyNumberFilter implements NumberFilter {
+-    private List<Integer> numbers = new ArrayList<>();
+-
+-//    public void addToFilter(int number) {
+-//        if (!this.numbers.contains(number)) {
+-//            numbers.add(number);
+-//        }
+-//    }
++    NumberFilter filter;
+ 
+-
++    public MyNumberFilter(NumberFilter filter) {
++        this.filter = filter;
++    }
+ 
+     @Override
+-    public boolean accept(int number) {
+-        if (this.numbers.contains(number)) {
+-            return true;
+-        }
+-        return false;
++    public boolean accept(int i) {
++        return this.filter.accept(i);
+     }
+ }
+Index: ../../Mine/lambda0/untitled/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../../Mine/lambda0/untitled/pom.xml b/../../Mine/lambda0/untitled/pom.xml
+new file mode 100644
+--- /dev/null	(date 1669137788556)
++++ b/../../Mine/lambda0/untitled/pom.xml	(date 1669137788556)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>org.example</groupId>
++    <artifactId>untitled</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <properties>
++        <maven.compiler.source>19</maven.compiler.source>
++        <maven.compiler.target>19</maven.compiler.target>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++    </properties>
++
++</project>
+\ No newline at end of file
+Index: src/main/java/lt/vtmc/MyExercises.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lt.vtmc;\r\n\r\nimport lt.itakademija.exam.Exercises;\r\nimport lt.itakademija.exam.IntegerGenerator;\r\nimport lt.itakademija.exam.NumberFilter;\r\n\r\nimport java.util.*;\r\n\r\npublic class MyExercises implements Exercises {\r\n    @Override\r\n    public Integer findSmallest(List<Integer> list) {\r\n\r\n        return list\r\n                .stream()\r\n                .mapToInt(x -> x)\r\n                .min()\r\n                .orElse(Integer.MIN_VALUE);\r\n    }\r\n\r\n    @Override\r\n    public Integer findLargest(List<Integer> list) {\r\n        return list\r\n                .stream()\r\n                .mapToInt(x -> x)\r\n                .max()\r\n                .orElse(Integer.MIN_VALUE);\r\n    }\r\n\r\n    @Override\r\n    public boolean isEqual(Object object1, Object object2) {\r\n        return object1.equals(object2);\r\n    }\r\n\r\n    @Override\r\n    public boolean isSameObject(Object object1, Object object2) {\r\n        if (object1 == object2) {\r\n            return true;\r\n        }\r\n        return false;\r\n    }\r\n\r\n    @Override\r\n    public List<Integer> consume(Iterator<Integer> iterator) {\r\n        List<Integer> integers = new ArrayList<>();\r\n        int i = 0;\r\n        for (Iterator<Integer> it = iterator; it.hasNext(); ) {\r\n            integers.add(it.next());\r\n\r\n        }\r\n        return integers;\r\n\r\n    }\r\n\r\n    @Override\r\n    public int computeSumOfNumbers(int number) {\r\n        int sum = 0;\r\n        for (int i = 1; i <= number; i++) {\r\n            sum += i;\r\n        }\r\n        return sum;\r\n    }\r\n\r\n    @Override\r\n    public int computeSumOfNumbers(int number, NumberFilter numberFilter) {\r\n        int sum = 0;\r\n        for (int i = 1; i <= number; i++) {\r\n            if (numberFilter.accept(i)) {\r\n                sum += i;\r\n            }\r\n        }\r\n        return sum;\r\n    }\r\n\r\n    @Override\r\n    public List<Integer> computeNumbersUpTo(int number) {\r\n        List<Integer> numbers = new ArrayList<>();\r\n        for (int i = 1; i < number; i++) {\r\n           numbers.add(i);\r\n        }\r\n        return numbers;\r\n    }\r\n\r\n    @Override\r\n    public Map<Integer, Integer> countOccurrences(List<Integer> list) {\r\n        Map<Integer, Integer> occurrencies = new HashMap<>();\r\n        for(Integer number : list){\r\n            if(!occurrencies.containsKey(number)){\r\n                occurrencies.put(number,1);\r\n            } else{\r\n                int mapValue = occurrencies.get(number).intValue();\r\n               occurrencies.put(number, mapValue++ );\r\n            }\r\n        }\r\n        return null;\r\n    }\r\n\r\n    @Override\r\n    public IntegerGenerator createIntegerGenerator(int start, int end) {\r\n        return new MyIntegerGenerator(start, end);\r\n    }\r\n\r\n    @Override\r\n    public IntegerGenerator createFilteredIntegerGenerator(IntegerGenerator integerGenerator, NumberFilter numberFilter) {\r\n//           IntegerGenerator createIntegerGenerator(1, 10), (n) -> {\r\n//            return n % 2 == 0;\r\n//        });\r\n\r\n\r\n\r\n//        return numberFilter.accept(integerGenerator.getNext());;\r\n        return null;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lt/vtmc/MyExercises.java b/src/main/java/lt/vtmc/MyExercises.java
+--- a/src/main/java/lt/vtmc/MyExercises.java	(revision 7838f267dff9e0f5ff7bb35efd4d740188b667ab)
++++ b/src/main/java/lt/vtmc/MyExercises.java	(date 1669151404518)
+@@ -33,19 +33,15 @@
+ 
+     @Override
+     public boolean isSameObject(Object object1, Object object2) {
+-        if (object1 == object2) {
+-            return true;
+-        }
+-        return false;
++        return object1 == object2;
+     }
+ 
+     @Override
+     public List<Integer> consume(Iterator<Integer> iterator) {
+         List<Integer> integers = new ArrayList<>();
+-        int i = 0;
++
+         for (Iterator<Integer> it = iterator; it.hasNext(); ) {
+             integers.add(it.next());
+-
+         }
+         return integers;
+ 
+@@ -75,23 +71,24 @@
+     public List<Integer> computeNumbersUpTo(int number) {
+         List<Integer> numbers = new ArrayList<>();
+         for (int i = 1; i < number; i++) {
+-           numbers.add(i);
++            numbers.add(i);
+         }
+         return numbers;
+     }
+ 
+     @Override
+     public Map<Integer, Integer> countOccurrences(List<Integer> list) {
+-        Map<Integer, Integer> occurrencies = new HashMap<>();
+-        for(Integer number : list){
+-            if(!occurrencies.containsKey(number)){
+-                occurrencies.put(number,1);
+-            } else{
+-                int mapValue = occurrencies.get(number).intValue();
+-               occurrencies.put(number, mapValue++ );
++        Map<Integer, Integer> occurrences = new HashMap<>();
++
++        for (Integer number : list) {
++            if (!occurrences.containsKey(number)) {
++                occurrences.put(number, 1);
++            } else {
++                int mapValue = occurrences.get(number).intValue() + 1;
++                occurrences.put(number, mapValue);
+             }
+         }
+-        return null;
++        return occurrences;
+     }
+ 
+     @Override
+@@ -101,13 +98,18 @@
+ 
+     @Override
+     public IntegerGenerator createFilteredIntegerGenerator(IntegerGenerator integerGenerator, NumberFilter numberFilter) {
+-//           IntegerGenerator createIntegerGenerator(1, 10), (n) -> {
+-//            return n % 2 == 0;
+-//        });
++        List<Integer> numbers = new ArrayList<>();
+ 
++        Integer number = integerGenerator.getNext();
++        while (number != null) {
+ 
++            if (numberFilter.accept(number)) {
++                numbers.add(number);
++            }
++            number = integerGenerator.getNext();
++        }
+ 
+-//        return numberFilter.accept(integerGenerator.getNext());;
+-        return null;
++
++        return new MyIntegerGenerator(numbers);
+     }
+ }

@@ -18,17 +18,20 @@ public class MyTruckManager implements TruckManager {
 
     @Override
     public Truck registerTruck(String id, int capacity) {
-        if( (id != null ) && (!id.isEmpty()) ){
-             if( (capacity  > 0) ){
-                return new Truck(id, capacity);
-             }
-        }
+        if( id == null ) { throw new NullPointerException();}
 
-        return null;
+        if( id.isEmpty() ){ throw new IllegalArgumentException();}
+
+        if( capacity  <= 0){ throw new IllegalArgumentException();}
+
+        Truck newTruck = new Truck(id, capacity);
+        trucks.add(newTruck);
+        return newTruck;
     }
 
     @Override
     public List<Truck> getTrucks() {
+
         return this.trucks;
     }
 
@@ -46,7 +49,15 @@ public class MyTruckManager implements TruckManager {
 
     @Override
     public Packet registerPacket(String packetId, int volume) {
-        return new Packet(packetId, volume);
+        if( packetId == null ) { throw new NullPointerException();}
+
+        if( packetId.isEmpty() ){ throw new IllegalArgumentException();}
+
+        if( volume  <= 0){ throw new IllegalArgumentException();}
+
+        Packet newPacket = new Packet(packetId, volume);
+        packets.add(newPacket);
+        return newPacket;
     }
 
     @Override

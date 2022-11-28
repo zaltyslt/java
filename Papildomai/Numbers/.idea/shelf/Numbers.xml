@@ -1,0 +1,9 @@
+<changelist name="Numbers" date="1669151405094" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Numbers/shelved.patch" />
+  <option name="DESCRIPTION" value="Numbers" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="lib/numbers.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Numbers/numbers.jar" />
+  </binary>
+</changelist>
