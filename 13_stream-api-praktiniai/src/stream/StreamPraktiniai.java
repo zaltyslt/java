@@ -141,15 +141,16 @@ public class StreamPraktiniai {
     //https://www.javacodegeeks.com/2015/11/java-8-streams-api-grouping-partitioning-stream.html
     
     public static Map<Boolean, List<User>> partionUsersByGender(List<User> users){
-     return  users.stream().map(u->u.isMale()).collect(partitioningBy(true));
+     return  users.stream().collect(Collectors.partitioningBy(User::isMale));
     }
 
     public static Map<Integer, List<User>> groupByAge(List<User> users){
-        throw new UnsupportedOperationException("Not implemented");
+        return users.stream().collect(Collectors.groupingBy(User::getAge));
     }
 
     public static Map<Boolean, Map<Integer, List<User>>> groupByGenderAndAge(List<User> users){
-        throw new UnsupportedOperationException("Not implemented");
+        Map<Integer, List<User>> tempList = users.stream().collect(Collectors.groupingBy(User::getAge));
+        return tempList.entrySet().stream().collect(Collectors.partitioningBy(User::isMale));
     }
 
     public static Map<Boolean, Long> countGender(List<User> users){
