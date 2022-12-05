@@ -1,0 +1,64 @@
++Add property to properties
+<properties>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+        
+        <junit.jupiter.version>5.9.0</junit.jupiter.version>
+</properties>
+
++Add to dependencies
+<dependencies>
+         <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+		<dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>5.9.1</version>
+            <scope>test</scope>
+        </dependency>
+</dependencies>
+
+<build>
+
+        <plugins>
+            <plugin>
+
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M7</version>
+            </plugin>
+        </plugins>
+    </build>
+
++Right click on method I need to test title -> Generate Test
+
+public class MathUtils {
+    public int add(int a, int b){
+        return a+b;
+    }
+}
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+class MathUtilsTest {
+
+    @Test
+    void testAdd() {
+        // fail("Not yet implemented");
+        MathUtils mathUtils = new MathUtils();
+        int expected = 2;
+        int actual = mathUtils.add(1,1);
+        assertEquals(expected,actual);
+    }
+}
+	
+=== "No news" is good news == "No failures" means test success
