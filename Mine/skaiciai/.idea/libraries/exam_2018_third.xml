@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="exam-2018-third">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/exam-2018-third.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -37,7 +37,7 @@
                 <version>3.0.0-M7</version>
             </plugin>
         </plugins>
-    </build>
+
 
 +Right click on method I need to test title -> Generate Test
 
