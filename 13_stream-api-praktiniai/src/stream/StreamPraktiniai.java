@@ -152,6 +152,7 @@ public class StreamPraktiniai {
         Map<Integer, List<User>> tempList = users.stream().collect(Collectors.groupingBy(User::getAge));
         return tempList.entrySet().stream().collect(Collectors.partitioningBy(User::isMale));
 	    //padaryti su cycle
+        //dar vienas pakeitimas
     }
 
     public static Map<Boolean, Long> countGender(List<User> users){
