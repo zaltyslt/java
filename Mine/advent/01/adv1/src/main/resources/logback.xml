@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Quite useful feature is that the library can automatically reload configuration files
+     when they’re modified. You can enable this behavior by setting the scan=true attribute:
+     <configuration scan="true">
+<    <configuration debug="true"> To check for errors in logback config -->
+<configuration scan="true" scanPeriod="1 minutes" debug="false">
+    <property name="HOME_LOG" value="logs/app.log"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %date{HH:mm:ss.SSS} [%thread] %-5level %logger{15} - %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${HOME_LOG}</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--  Add an .gz extension, Logback will compress the archived files.-->
+            <fileNamePattern>logs/archived/app.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <!-- each archived file, size max 10MB -->
+            <maxFileSize>10MB</maxFileSize>
+            <!-- total size of all archive files, if total size > 20GB, it will delete old archived file -->
+            <totalSizeCap>20GB</totalSizeCap>
+            <!-- 60 days to keep -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d %p %c{1}. [%t] %m%n</pattern>
+            %d{HH:mm:ss.SSS} [%thread] %-5level %logger{3} - %msg%n
+        </encoder>
+    </appender>
+
+    <!-- level="  trace, debug, info, warn, error" -->
+    <logger name="com.mkyong" level="debug" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE-ROLLING"/>
+    </logger>
+
+ <logger name="com.mkyong.two" level="debug" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE-ROLLING"/>
+    </logger>
+
+
+
+    <root level="error">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE-ROLLING"/>
+    </root>
+
+</configuration>

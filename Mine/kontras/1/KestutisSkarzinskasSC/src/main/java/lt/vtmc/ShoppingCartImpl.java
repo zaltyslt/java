@@ -7,34 +7,36 @@ import java.util.List;
 import java.util.Collection;
 
 public class MyShopingCart implements ShoppingCart {
-   List<ShoppingItem> shopingCart ;
+   private List<ShoppingItem> shoppingCart;
+
 
     public MyShopingCart() {
-        shopingCart = new ArrayList<>();
+        shoppingCart = new ArrayList<>();
     }
 
     @Override
     public void addShoppingItem(ShoppingItem shoppingItem) {
-        shopingCart.add(shoppingItem);
+        shoppingCart.add(shoppingItem);
     }
 
     @Override
     public void removeShoppingItem(ShoppingItem shoppingItem) {
-        shopingCart.remove(shoppingItem);
+        shoppingCart.remove(shoppingItem);
     }
 
     @Override
     public void clearShoppingCart() {
-        shopingCart.clear();
+        shoppingCart.clear();
     }
 
     @Override
     public Collection<ShoppingItem> getShoppingCartItems() {
-        return shopingCart;
+        return shoppingCart;
     }
 
     @Override
     public double calculateTotalPrice() {
-        return shopingCart.stream().mapToDouble(ShoppingItem::getPrice).sum();
+
+        return shoppingCart.stream().mapToDouble(ShoppingItem::getPrice).sum();
     }
 }
