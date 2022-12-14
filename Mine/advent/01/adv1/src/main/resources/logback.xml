@@ -35,14 +35,14 @@
     </appender>
 
     <!-- level="  trace, debug, info, warn, error" -->
-    <logger name="com.advent" level="debug" additivity="false">
+    <logger name="com.mkyong" level="debug" additivity="false">
         <appender-ref ref="CONSOLE"/>
-<!--        <appender-ref ref="FILE-ROLLING"/>-->
+        <appender-ref ref="FILE-ROLLING"/>
     </logger>
 
- <logger name="com.advent.d07" level="debug" additivity="false">
+ <logger name="com.mkyong.two" level="debug" additivity="false">
         <appender-ref ref="CONSOLE"/>
-<!--        <appender-ref ref="FILE-ROLLING"/>-->
+        <appender-ref ref="FILE-ROLLING"/>
     </logger>
 
 

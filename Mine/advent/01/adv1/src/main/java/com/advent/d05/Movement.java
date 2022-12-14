@@ -18,7 +18,7 @@ public class Movement {
 //        for (int i = 0; i < Integer.parseInt(temp[1]); i++) {
 //            moves.add(new Move(Integer.parseInt(temp[3])-1, Integer.parseInt(temp[5])-1));
 //        }
-moves.add(new Move(Integer.parseInt(temp[3])-1, Integer.parseInt(temp[5])-1, Integer.parseInt(temp[1])) );
+        moves.add(new Move(Integer.parseInt(temp[3])-1, Integer.parseInt(temp[5])-1, Integer.parseInt(temp[1])) );
 
 //        System.out.println();
     }

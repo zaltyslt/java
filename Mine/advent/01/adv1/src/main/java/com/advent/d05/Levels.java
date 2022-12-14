@@ -4,59 +4,62 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Levels {
- private List<ArrayList<String>> columns;
-// private List<Level> levels;
- private List<String> crates;
- private int columnsCount;
+ private List<Level> levels;
 
-    public Levels(List<String> cratesList) {
-        this.columns = new ArrayList<>();
-        this.crates = cratesList;
-        this.columnsCount = crates.get(0).length();
-        addCollumns();
-        putCrates();
-        clearMarksInColumns();
+    public Levels() {
+        this.levels = new ArrayList<>();
     }
-    private void addCollumns(){
-       for(int i =0; i< columnsCount;i++){
-          this.columns.add(new ArrayList<String>());
+
+    public void addLevel(String values){
+      this.levels.add(new Level(values));
+    }
+
+    public String getBoxValueFrom(int column){
+        int levelsCount = levels.size();
+
+        for(int i = 0; i <levelsCount; i++){
+            System.out.println(levels.get(i).toString()+"$");
+           if(levels.get(i).boxHasValue(column)){
+              return  levels.get(i).getBoxValue(column);
+           }
        }
+        throw new IllegalStateException("getBoxValueFrom");
     }
 
-    private void putCrates(){
-       for(String crate : crates){
-            String[] cratesRow = crate.split("");
-                for(int i=0; i<columnsCount; i++) {
-                    columns.get(i).add(0, cratesRow[i]);
-                }
-       }
-    }
+    public boolean addBoxValueTo(String value, int column){
+        //if there are value in the highest level add level
+        System.out.println(this.levels.get(0)+"$- "+(column+1));
+        System.out.println(this.levels.get(0).boxHasValue(column));
+        if(this.levels.get(0).boxHasValue(column)){
+          Level tempLevel = new Level();
+            tempLevel.emptyLevel(levels.get(0).levelLength()-1);
+            levels.add(0,tempLevel);
+            levels.get(0).setBoxValue(value, column);
 
-   private void clearMarksInColumns(){
-        for(ArrayList<String> column : columns){
-            while (column.contains("*")){
-                column.remove("*");
+            return true;
+        }
+        for (int i= levels.size()-1; i >=0; i--) {
+            if (!levels.get(i).boxHasValue(column)) {
+                levels.get(i).setBoxValue(value, column);
+                return true;
             }
         }
-   int i =0;
+        return false;
     }
-
- public String getBoxValueFrom(int column){
-    List<String> tempColumn = columns.get(column);
-    String tempCrate = tempColumn.get(tempColumn.size()-1);
-      tempColumn.remove(tempColumn.size()-1);
-        return tempCrate;
- }
-
- public void putBoxValueTo(int column, String value){
-        columns.get(column).add(value);
- }
-
+    public void remove() {
+        this.levels.remove(levels.size()-1);
+    }
     public String reportTopBoxes(){
         StringBuilder tops = new StringBuilder();
-        for(ArrayList<String> column : columns){
-           tops.append(column.get(column.size()-1));
+        for(int i =0; i<this.levels.get(0).levelLength(); i++){
+            for(Level level : levels){
+                if (level.boxHasValue(i)){
+                    tops.append(level.getBoxValue(i));
+                    break;
+                }
+            }
         }
+
         return tops.toString();
     }
 }

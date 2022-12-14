@@ -5,13 +5,11 @@ public class Move {
     private int to = 0;
     private int count = 0;
 
-    public Move(int from, int to) {
+    public Move(int from, int to, int count) {
         this.from = from;
         this.to = to;
-           }
-    public Move(int from, int to, int count) {
-        this(from, to);
         this.count = count;
+
     }
 
     public int getFrom() {

@@ -1,26 +1,29 @@
 package com.advent.d05;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class Converter {
-    private List<String> organizedCrates;
+
     public Converter(ArrayList<String> crates) {
-       organizedCrates = new ArrayList<>();
-
-        //is crates list istrina paskutine linija, nes ten stulpeliu indeksai
         crates.remove(crates.size() - 1);
-        StringBuilder cratesRow = new StringBuilder();
+//        int x = crates.size();
+//        int y = crates.size();
+//        int col = 0;
+//        String[][] array2D = new String[x][y];
 
+        ArrayList list2D = new ArrayList();
+        ArrayList listRotated = new ArrayList();
         for (String crate : crates) {
             String tempValue = crate;
+            ArrayList tempList = new ArrayList<>();
 
 
             while (tempValue.length() > 0) {
                 String seq = tempValue.substring(0, 3);
                 if (seq.equals("   ")) {
-                    cratesRow.append("*");
+                    tempList.add("*");
                 } else if (seq.substring(0, 1).equals("[")) {
-                    cratesRow.append(seq.substring(1, 2));
+                    tempList.add(seq.substring(1, 2));
                 }
 //            System.out.println(seq);
                 if (tempValue.length() > 3) {
@@ -29,16 +32,14 @@ public class Converter {
                     break;
                 }
             }
+            list2D.add(tempValue);
 
-            organizedCrates.add(cratesRow.toString());
-            cratesRow.setLength(0);
+            for(int i = 0; i < tempList.size();i++){
+               array2D[col][i] = tempList.get(i).toString();
+               col++;
+            }
         }
-       //does nothing, just placeholder for breakpoint
 
-        int i = 0;
-    }
-    //returns transformed crates list
-    public List<String> getCratesList(){
-        return organizedCrates;
+        int i =0;
     }
 }

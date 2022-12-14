@@ -6,19 +6,19 @@ import lt.techin.shoppingcart.test.BaseShoppingCartTest;
 
 public class MyTest extends BaseShoppingCartTest {
     @Override
-    protected ShoppingCart getLockedShoppingCartWithDiscountAndTaxApplied(ShoppingCart shoppingCart, int discountRate, int taxRate) {
-        return new LockedShoppingCardDiscount(new LockedShoppingCartTax( shoppingCart, taxRate),discountRate);
+    protected ShoppingCart getLockedShoppingCartWithDiscountAndTaxApplied(ShoppingCart shoppingCart, int discountRate,
+                                                                          int taxRate) {
+        return null;
     }
 
     @Override
     protected ShoppingCart getDiscountAppliedShoppingCart(ShoppingCart shoppingCart, int percent) {
-
-        return new LockedShoppingCardDiscount(shoppingCart, percent);
+        return null;
     }
 
     @Override
     protected ShoppingCart getTaxAppliedShoppingCart(ShoppingCart shoppingCart, int tax) {
-        return new LockedShoppingCartTax(shoppingCart, tax);
+        return new LockedShoppingCart(shoppingCart);
     }
 
     @Override

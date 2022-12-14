@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26a31a04-54bd-4696-982c-bbb833721144" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/LockedShoppingCardDiscount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/LockedShoppingCartTax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/vtmc/LockedShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/LockedShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/vtmc/MyShopingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/ShoppingCartImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lt/vtmc/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/MyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/LockedShoppingCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/MyShopingCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/MyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/shopping-cart.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +36,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,23 +55,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "F:/desktop/jd-intellij-0.8.1.zip",
+    "last_opened_file_path": "C:/Users/Rytas/Desktop/gitHub/java/Mine/kontras/1/KestutisSkarzinskasSC/src/main/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\desktop\codedump\java\Mine\kontras\1\KestutisSkarzinskasSC\src\main\java\lt\vtmc" />
       <recent name="C:\Users\Rytas\Desktop\gitHub\java\Mine\kontras\1\KestutisSkarzinskasSC\src\main\resources" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\desktop\codedump\java\Mine\kontras\1\KestutisSkarzinskasSC\src\main\resources" />
-    </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest">
+  <component name="RunManager">
     <configuration name="MyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="KestutisSkarzinskasSC" />
       <extension name="coverage">
@@ -80,47 +82,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyTest.calculatesTotalPriceWithDiscountTakenIntoAccount()" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="KestutisSkarzinskasSC" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lt.vtmc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="lt.vtmc" />
-      <option name="MAIN_CLASS_NAME" value="lt.vtmc.MyTest" />
-      <option name="TEST_OBJECT" value="uniqueId" />
-      <uniqueIds>
-        <uniqueId value="[engine:junit-jupiter]/[class:lt.vtmc.MyTest]/[method:calculatesTotalPriceWithDiscountTakenIntoAccount()]" />
-      </uniqueIds>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyTest.calculatesTotalPriceWithTaxRateTakenIntoAccount()" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="KestutisSkarzinskasSC" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lt.vtmc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="lt.vtmc" />
-      <option name="MAIN_CLASS_NAME" value="lt.vtmc.MyTest" />
-      <option name="TEST_OBJECT" value="uniqueId" />
-      <uniqueIds>
-        <uniqueId value="[engine:junit-jupiter]/[class:lt.vtmc.MyTest]/[method:calculatesTotalPriceWithTaxRateTakenIntoAccount()]" />
-      </uniqueIds>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MyTest" />
-        <item itemvalue="JUnit.MyTest.calculatesTotalPriceWithTaxRateTakenIntoAccount()" />
-        <item itemvalue="JUnit.MyTest.calculatesTotalPriceWithDiscountTakenIntoAccount()" />
       </list>
     </recent_temporary>
   </component>
@@ -145,10 +109,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$" />
-    </ignored-roots>
   </component>
 </project>

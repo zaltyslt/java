@@ -1,12 +1,14 @@
 package com.advent.d05;
 
+import java.util.List;
+
 public class Stack {
-    Levels collumns;
+    Levels levels;
     Movement moves;
     int levelsCount = 0;
 
-    public Stack(Levels collumns, Movement moves) {
-        this.collumns = collumns;
+    public Stack(Levels levels, Movement moves) {
+        this.levels = levels;
         this.moves = moves;
 
         moveIt();
@@ -18,16 +20,14 @@ public class Stack {
             Move move = moves.getNextMove();
 
             System.out.println("take from "+ (move.getFrom()+1)+" put to "+(move.getWhereTo()+1)+ " take " +move.getCount());
-           String[] cratesPortion = new String[move.getCount()];
-            for(int i =0; i< move.getCount();i++) {
-               cratesPortion[i] = collumns.getBoxValueFrom(move.getFrom());
-           }
-            for(int i = move.getCount()-1; i>=0; i--) {
-                collumns.putBoxValueTo(move.getWhereTo(),  cratesPortion[i]);
-            }
+            String box = levels.getBoxValueFrom(move.getFrom());
+
+            System.out.println("box val " + box);
+            System.out.println("ops "+(++ops));
+            levels.addBoxValueTo(box, move.getWhereTo());
 
         }
-        System.out.println(collumns.reportTopBoxes());
+        System.out.println(levels.reportTopBoxes());
     }
 
 

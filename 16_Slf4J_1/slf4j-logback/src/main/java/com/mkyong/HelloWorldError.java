@@ -1,6 +1,4 @@
-package com.mkyong;
+package tcom.kmkyong;
 
-
-class HelloWorldError{
-
+public class HelloWorldError {
 }
