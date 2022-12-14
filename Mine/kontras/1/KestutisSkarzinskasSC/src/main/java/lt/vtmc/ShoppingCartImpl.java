@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Collection;
 
-public class MyShopingCart implements ShoppingCart {
+public class ShoppingCartImpl implements ShoppingCart {
    private List<ShoppingItem> shoppingCart;
 
 
-    public MyShopingCart() {
+    public ShoppingCartImpl() {
         shoppingCart = new ArrayList<>();
     }
 

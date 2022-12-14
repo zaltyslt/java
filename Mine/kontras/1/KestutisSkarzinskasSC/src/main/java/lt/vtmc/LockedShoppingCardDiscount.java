@@ -2,16 +2,18 @@ package lt.vtmc;
 
 import lt.techin.shoppingcart.ShoppingCart;
 
-public class LockedShopingCardDiscount extends LockedShoppingCart {
+public class LockedShoppingCardDiscount extends LockedShoppingCart {
     private ShoppingCart shoppingCart;
-    private int disCount;
+    private int discount;
 
-    public LockedShopingCardDiscount(ShoppingCart shoppingCart, int discount) {
+    public LockedShoppingCardDiscount(ShoppingCart shoppingCart, int discount) {
         super(shoppingCart);
+        this.discount = discount;
     }
 
     @Override
     public double calculateTotalPrice() {
-        return shoppingCart.calculateTotalPrice() * (1-disCount / 100.0);
+
+        return super.calculateTotalPrice() * (discount / 100.0);
     }
 }

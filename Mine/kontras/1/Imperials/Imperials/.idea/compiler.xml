@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Logging_16_Slf4j_1" />
+        <module name="Imperials" />
       </profile>
     </annotationProcessing>
   </component>

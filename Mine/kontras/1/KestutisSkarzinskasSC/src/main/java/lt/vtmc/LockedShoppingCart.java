@@ -7,22 +7,20 @@ import java.util.Collection;
 
 
 public class LockedShoppingCart implements ShoppingCart {
-    private ShoppingCart shopingCart;
+    private ShoppingCart shoppingCart;
 
-    public LockedShoppingCart(ShoppingCart shopingCart, ) {
-        this.shopingCart = shopingCart;
+    public LockedShoppingCart(ShoppingCart shoppingCart) {
+        this.shoppingCart = shoppingCart;
     }
 
     @Override
     public void addShoppingItem(ShoppingItem shoppingItem) {
         throw new ShoppingCartModificationException();
-
     }
 
     @Override
     public void removeShoppingItem(ShoppingItem shoppingItem) {
         throw new ShoppingCartModificationException();
-
     }
 
     @Override
@@ -32,11 +30,12 @@ public class LockedShoppingCart implements ShoppingCart {
 
     @Override
     public Collection<ShoppingItem> getShoppingCartItems() {
-        return shopingCart.getShoppingCartItems();
+        return shoppingCart.getShoppingCartItems();
     }
 
     @Override
-    public double calculateTotalPrice() {
-        return shopingCart.calculateTotalPrice();
+    public double calculateTotalPrice(){
+        return shoppingCart.calculateTotalPrice();
     }
+
 }

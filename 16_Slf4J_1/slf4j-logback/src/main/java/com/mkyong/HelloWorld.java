@@ -1,4 +1,5 @@
-package tcom.kmkyong;
+package com.mkyong;
+import com.mkyong.two.Simple;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +26,8 @@ public class HelloWorld {
 //        LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
 //        // print logback's internal status
 //        StatusPrinter.print(lc);
-
+        Simple simple = new Simple();
+        simple.show();
     }
 
     static int getNumber() {

@@ -13,32 +13,34 @@ public class Main {
     public static void main(String[] args) {
         List<String> sourceData = new ArrayList<>();
 
-        File file = new File("F:\\desktop\\codedump\\java\\Mine\\advent\\01\\adv1\\src\\main\\resources\\input05s.txt");
+        File file = new File("F:\\desktop\\codedump\\java\\Mine\\advent\\01\\adv1\\src\\main\\resources\\input05.txt");
         try {
             sourceData.addAll(Files.readAllLines(Paths.get(file.toURI())));
 
         } catch (IOException e) {
             e.printStackTrace();
         }
-        int instructionLine =0;
-        Levels levels = new Levels();
+        int instructionLine = 0;
+        //perduoda dezes
+
         ArrayList<String> crates = new ArrayList<>();
+
         for (String line : sourceData) {
           instructionLine++;
             if (line.isEmpty()) {break;}
             crates.add(line);
-//          levels.addLevel(line);
+
         }
-        Converter converter = new Converter(crates);
+        Converter cratesConverter = new Converter(crates);
+
+        Levels levels = new Levels(cratesConverter.getCratesList());
+
+
         Movement movement = new Movement();
         for(int i=instructionLine; i<sourceData.size();i++){
            movement.addMove( sourceData.get(i));
         }
 
-        levels.remove();
         Stack stack = new Stack(levels,movement);
-
-
     }
-
 }
