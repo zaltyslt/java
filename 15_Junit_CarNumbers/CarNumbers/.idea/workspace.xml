@@ -4,60 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e89d796c-f752-40b3-82a6-95d69d10d577" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lt/vtmc/ks/CarNumberPricingCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../16_Slf4J_1/.idea/16_Slf4J_1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../15_1 praktinis (junit)/Junit_01/src/main/java/lt/vtmc/ks/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../15_1 praktinis (junit)/Junit_01/src/main/java/lt/vtmc/ks/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../15_1 praktinis (junit)/Junit_01/src/main/java/lt/vtmc/ks/MathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../15_1 praktinis (junit)/Junit_01/src/main/java/lt/vtmc/ks/MathUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../15_1 praktinis (junit)/Junit_01/src/test/java/lt/vtmc/ks/MathUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../15_1 praktinis (junit)/Junit_01/src/test/java/lt/vtmc/ks/MathUtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../15_1 praktinis (junit)/Junit_01/target/surefire-reports/TEST-lt.vtmc.ks.MathUtilsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../15_1 praktinis (junit)/Junit_01/target/surefire-reports/TEST-lt.vtmc.ks.MathUtilsTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../15_1 praktinis (junit)/Junit_01/target/surefire-reports/lt.vtmc.ks.MathUtilsTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../15_1 praktinis (junit)/Junit_01/target/surefire-reports/lt.vtmc.ks.MathUtilsTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../16_Slf4J_1/slf4j-logback/src/main/java/com/mkyong/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_Slf4J_1/slf4j-logback/src/main/java/com/mkyong/HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../16_Slf4J_1/slf4j-logback/src/main/java/com/mkyong/HelloWorldError.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_Slf4J_1/slf4j-logback/src/main/java/com/mkyong/HelloWorldError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../16_Slf4J_1/slf4j-logback/src/main/java/com/mkyong/two/Simple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_Slf4J_1/slf4j-logback/src/main/java/com/mkyong/two/Simple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../16_Slf4J_1/slf4j-logback/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_Slf4J_1/slf4j-logback/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../16_logging_and_Java-doc/Loging1/src/main/java/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_logging_and_Java-doc/Loging1/src/main/java/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../16_logging_and_Java-doc/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../16_logging_and_Java-doc/target/classes/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/adv1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/adv1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Levels.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Levels.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d05/Stack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d06/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d06/Analyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d06/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d06/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d07/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d07/Directory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d07/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d07/File.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d07/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d07/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d07/Mover.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/d07/Mover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/readfile/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/java/com/advent/readfile/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/resources/input06s.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/resources/input06s.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/resources/input07.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/resources/input07.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/resources/input07s.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/resources/input07s.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/advent/01/adv1/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/junit1/.idea/junit1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/junit1/.idea/junit1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/junit1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/junit1/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/junit1/JUnit-5-basics/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/junit1/JUnit-5-basics/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/kontras/1/Imperials/Imperials/src/main/java/lt/vtmc/CubeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/kontras/1/Imperials/Imperials/src/main/java/lt/vtmc/CubeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/kontras/1/Imperials/Imperials/src/main/java/lt/vtmc/MyMetricCube.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/kontras/1/Imperials/Imperials/src/main/java/lt/vtmc/MyMetricCube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/src/main/java/lt/vtmc/LockedShoppingCardDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/src/main/java/lt/vtmc/LockedShoppingCardDiscount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/src/main/java/lt/vtmc/LockedShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/src/main/java/lt/vtmc/LockedShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/src/main/java/lt/vtmc/LockedShoppingCartTax.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/src/main/java/lt/vtmc/LockedShoppingCartTax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/src/main/java/lt/vtmc/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/src/main/java/lt/vtmc/MyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/src/main/java/lt/vtmc/ShoppingCartImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mine/kontras/1/KestutisSkarzinskasSC/src/main/java/lt/vtmc/ShoppingCartImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="e89d796c-f752-40b3-82a6-95d69d10d577" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

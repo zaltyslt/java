@@ -3,7 +3,7 @@ package com.advent.d09;
 import com.advent.readfile.Reader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import com.advent.readfile.*;
 import java.util.*;
 
 
@@ -20,6 +20,7 @@ public class Commander {
 
         Reader reader = new Reader();
         List<String> source = reader.read("input09s.txt");
+
         String[] number;
         logger.info("Commands {} ", source.size());
         for (String str : source) {

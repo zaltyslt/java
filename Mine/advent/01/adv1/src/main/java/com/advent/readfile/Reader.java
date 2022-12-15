@@ -1,2 +1,4 @@
-package com.advent.readfile;public class Reader {
+package com.advent.readfile;
+public class Reader {
+
 }
