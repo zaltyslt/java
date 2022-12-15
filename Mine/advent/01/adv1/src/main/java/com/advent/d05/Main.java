@@ -35,8 +35,8 @@ public class Main {
            movement.addMove( sourceData.get(i));
         }
 
-        levels.remove();
-        Stack stack = new Stack(levels,movement);
+//        levels.remove();
+//        Stack stack = new Stack(levels,movement);
 
 
     }

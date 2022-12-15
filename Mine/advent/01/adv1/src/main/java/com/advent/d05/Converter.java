@@ -35,8 +35,8 @@ public class Converter {
             list2D.add(tempValue);
 
             for(int i = 0; i < tempList.size();i++){
-               array2D[col][i] = tempList.get(i).toString();
-               col++;
+//               array2D[col][i] = tempList.get(i).toString();
+//               col++;
             }
         }
 
