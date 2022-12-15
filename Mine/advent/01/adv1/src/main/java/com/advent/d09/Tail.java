@@ -1,5 +1,6 @@
 package com.advent.d09;
 
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,38 +13,47 @@ public class Tail {
     public static final Logger logger = LoggerFactory.getLogger(Tail.class);
 
     private List<Head> tails = new ArrayList<>();
-    private int whichTail = 0;
+    private int tail9 =1;
+    //private int whichTail = 0;
 
-    public Tail(Head head) {
-        this.head = head;
+    public Tail(@NotNull Head head) {
+          this.head = head;
         for (int i = 0; i < 9; i++){
             tails.add(new Head());
         }
     }
     public void moveTails() {
-       Head tempTail = this.head;
-       Head listTail;
+       Head tempHead = this.head;
+       Head listTail = null;
 
-        for (int i = 0; i < 9; i++){
-            whichTail = i;
-            if(i== 0){
-                tempTail = head;
-            tailTracer.addTo(this.head.getX(), this.head.getY());
-            }
+        for (int i = 0; i < tails.size(); i++){
+
+//            if(i== 0){
+//                tailTracer.addTo(this.head.getX(), this.head.getY());
+//            }
+
             listTail = tails.get(i);
-           if (!isTouching(tempTail,listTail)) {
-               if (!moveDirect(tempTail,listTail)) {
-                   movesDiagonally(tempTail,listTail);
+
+            if (!isTouching(tempHead,listTail)) {
+               if(i==8){ tail9++;}
+                if (!moveDirect(tempHead,listTail)) {
+                   movesDiagonally(tempHead,listTail);
                }
-               movesDirect(tempTail,listTail);
-           }
-           if(i==8){ tailTracer.addTo(listTail.getX(), listTail.getY());}
-           tempTail = listTail;
-           logger.info("Tail{} ({}:{})",i,tempTail.getX(), tempTail.getY());
+                movesDirect(tempHead,listTail);
+            }
+
+            if(i == 8) {
+                tailTracer.addTo(listTail.getX(), listTail.getY());
+                logger.info("TempHead ({}:{}), Tail{} ({}:{})", tempHead.getX(), tempHead.getY(), i, listTail.getX(), listTail.getY());
+            }
+//            logger.info("TempHead ({}:{}), Tail{} ({}:{})",tempHead.getX(), tempHead.getY(), i, listTail.getX(), listTail.getY());
+            tempHead = listTail;
 
        }
-        Painter painter = new Painter(this.head, this.tails);
+//        Painter painter = new Painter(this.head, this.tails);
+        logger.info("Locations count: {}", tail9);
         logger.info("Locations count: {}", tailTracer.count());
+
     }
     private boolean isTouching(Head head, Head tail) {
 
@@ -76,7 +86,7 @@ public class Tail {
 
             tail.calcHeadCoords(new Command(direction, 1));
 //          if(whichTail == 9){
-            tailTracer.addTo(tail.getX(), tail.getY());
+//            tailTracer.addTo(tail.getX(), tail.getY());
 //          }
         }
 
@@ -108,7 +118,7 @@ public class Tail {
             tail.setY(tailY + 1);
         }
 //        if(whichTail == 9) {
-            tailTracer.addTo(tail.getX(), tail.getY());
+//            tailTracer.addTo(tail.getX(), tail.getY());
 //        }
     }
 }

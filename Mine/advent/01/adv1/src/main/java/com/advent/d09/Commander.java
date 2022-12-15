@@ -19,15 +19,13 @@ public class Commander {
     public Commander() {
 
         Reader reader = new Reader();
-        List<String> source = reader.read("input09s.txt");
-
+        List<String> source = reader.read("input09.txt");
         String[] number;
         logger.info("Commands {} ", source.size());
         for (String str : source) {
             number = str.split(" ");
             commands.add(new Command(number[0], Integer.parseInt(number[1])));
         }
-
     }
 
 
@@ -35,13 +33,16 @@ public class Commander {
 
         Command command = commands.poll();
         int i = 0;
+        //kol yra komandu
         while (command != null) {
-            head.calcHeadCoords(command);
 
-            logger.info("No {}, command({} {}): head {}", i++, command.getDirection(), command.getSteps(), printHeadLocation());
-//            moveTail();
-            tails.moveTails();
+                for(int n=0; n< command.getSteps();n++){
+                    head.calcHeadCoords(new Command(command.getDirection(),1));
+                    logger.info("No {}, command({} {}): head {}", i++, command.getDirection(), command.getSteps(), printHeadLocation());
+//                  moveTail();
+                    tails.moveTails();
 //            logger.info("No {},                 tail {}:{}", i,  tail.getX(), tail.getY());
+            }
             command = commands.poll();
             logger.info("------------------------");
 //            if(!isTouching()){logger.info("!!!! {}:{} {}:{}", head.getX(),head.getY(), tail.getX(), tail.getY());}
