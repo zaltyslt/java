@@ -50,10 +50,9 @@ public class StreamPraktiniai {
 
     public static List<String> mapToUpperCase(List<String> strings){
 //        return strings.stream().map(s->s.toUpperCase()).collect(Collectors.toList());
-         	return strings.stream().map(w -> w.split("")).
-         			flatMap(Arrays::stream)
-    	           .distinct()
-    	           .collect(Collectors.toList());
+         	return strings.stream()
+                    .map(String::toUpperCase)
+         			.collect(Collectors.toList());
     }
 
     public static Integer sum(List<Integer> integers){
@@ -149,18 +148,16 @@ public class StreamPraktiniai {
     }
 
     public static Map<Boolean, Map<Integer, List<User>>> groupByGenderAndAge(List<User> users){
-        Map<Integer, List<User>> tempList = users.stream().collect(Collectors.groupingBy(User::getAge));
-        return tempList.entrySet().stream().collect(Collectors.partitioningBy(User::isMale));
-	    //padaryti su cycle
-        //dar vienas pakeitimas
+
+        return users.stream().collect(Collectors.partitioningBy(User::isMale,Collectors.groupingBy(User::getAge)));
     }
 
     public static Map<Boolean, Long> countGender(List<User> users){
-        throw new UnsupportedOperationException("Not implemented");
+       return  users.stream().collect(Collectors.partitioningBy(User::isMale,Collectors.counting()));
     }
         
     public static IntSummaryStatistics ageSummaryStatistics(List<User> users){
-        throw new UnsupportedOperationException("Not implemented");
+       return users.stream().collect(Collectors.summarizingInt(User::getAge));
     }
 
 }
