@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"lt.vtmc.ks","l":"MeBaseTest"},{"p":"lt.vtmc.ks","l":"MyBank"},{"p":"lt.vtmc.ks","l":"MyCurrencyConverter"},{"p":"lt.vtmc.ks","l":"MyTest"}];updateSearchResults();

@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"lt.vtmc.ks","l":"MachineTest"},{"p":"lt.vtmc.ks","l":"NewVendingMachine"},{"p":"lt.vtmc.ks.test","l":"UnitTest"}];updateSearchResults();

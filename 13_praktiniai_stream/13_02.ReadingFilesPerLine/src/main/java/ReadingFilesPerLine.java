@@ -1,11 +1,8 @@
 
-import java.io.File;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ReadingFilesPerLine {
@@ -22,8 +19,17 @@ public class ReadingFilesPerLine {
 
     }
     public static List<String> read(String file){
+        List <String> tempList = new ArrayList<>();
+        try {
+            List<String> allLines = Files.readAllLines(Paths.get(file));
 
-        return Arrays.stream(file).spliterator("\n").;
+            tempList.addAll(allLines);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return tempList;
     }
+
 
 }
